@@ -1,0 +1,23 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+/* ----------------------------------------------------------------------------*/
+body{
+  background-color: #e5e5e5;
+}
+
+header{
+  background-color: #4EABF1;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 30px;
+}
+
+/* ---------------------------- FOOTER ------------------------------------------*/
+
