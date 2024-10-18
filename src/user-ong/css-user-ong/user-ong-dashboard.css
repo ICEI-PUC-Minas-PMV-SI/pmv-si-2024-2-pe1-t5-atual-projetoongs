@@ -88,6 +88,7 @@ main {
   border-radius: 7px;
   color: white;
   font-weight: bold;
+  cursor: pointer;
 }
 
 

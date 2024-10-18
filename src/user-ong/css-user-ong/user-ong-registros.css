@@ -31,6 +31,7 @@
 .reg-img{
   width: 250px;
   height: 250px;
+  cursor: pointer;
 }
 
 .reg-card-h3{
@@ -60,4 +61,5 @@
   width: 80px;
   height: 80px;
   border-radius: 100%;
+  cursor: pointer;
 }
