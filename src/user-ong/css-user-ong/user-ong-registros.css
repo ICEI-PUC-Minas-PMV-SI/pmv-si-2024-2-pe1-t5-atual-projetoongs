@@ -1,0 +1,63 @@
+#registros{
+  display: flex;
+  flex-direction: column;
+  padding: 50px 50px;
+  width: 90%;
+}
+
+#reg-titulo{
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+#reg-group-cards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.reg-card{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 250px;
+}
+
+.reg-img{
+  width: 250px;
+  height: 250px;
+}
+
+.reg-card-h3{
+  font-size: 16px;
+}
+
+.reg-card-paragrafo{
+  font-size: 12px;
+  width: 90%;
+  color: #5A5A5A;
+  margin-bottom: 10px;
+}
+
+#reg-btn-div{
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#reg-btn{
+  background-color: #4EAAED;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
