@@ -4,11 +4,14 @@
   padding: 0;
   text-decoration: none;
   box-sizing: border-box;
+  font-family: Poppins;
 }
-/* ----------------------------------------------------------------------------*/
+/* ----------------------------------------------------------------*/
 body{
-  background-color: #e5e5e5;
+  background-color: #efefef;
 }
+
+/* ---------------------------- HEADER ------------------------*/
 
 header{
   background-color: #4EABF1;
@@ -16,8 +19,63 @@ header{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 0px 30px;
+  padding: 0px 40px;
 }
 
-/* ---------------------------- FOOTER ------------------------------------------*/
+main{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* -------------------Sessão Logotipo-----------------------*/
+
+#div-logotipo{
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+}
+
+#logotipo{
+  height: 70%;
+}
+
+/* --------------Sessão barra de pesquisa----------------------*/
+
+
+/* -------------------Sessão Navbar-----------------------------*/
+#div-navbar{
+  
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+}
+
+#navbar{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.opcao-pagina{
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+/* ---------------------Sessão icon--------------------------*/
+
+#div-user-icon{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#user-icon{
+  height: 60%;
+}
+
+/* ---------------------------- FOOTER ------------------------*/
 
