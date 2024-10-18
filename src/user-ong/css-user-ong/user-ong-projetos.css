@@ -1,0 +1,90 @@
+#projetos{
+  display: flex;
+  padding: 10px 50px;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+#pj-info{
+  display: flex;
+  gap: 40px;
+  align-items: center;
+justify-content: center;
+}
+
+#pj-btn{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #AD94E5;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#pj-main{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pj-card{
+  background-color: white;
+  width: 40%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 10%;
+}
+
+.pj-card-info{
+  height: 100%;
+  padding: 10px;
+  width: 60%;
+}
+
+.pj-img{
+  border-radius: 5%;
+  width: 20%;
+  margin-left: 10px;
+  background-color: lavender;
+}
+
+.pj-card-h3{
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.pj-card-paragrafo{
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.pj-card-lupa{
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.pj-lupa{
+  width: 45px;
+  height: 45px;
+  background-color: #D9D9D9;
+  padding: 10px;
+  border-radius: 10%;
+}
+
+.pj-ver-mais{
+  font-size: 12px;
+  text-decoration: underline;
+  color: #4EAAED;
+}
+
