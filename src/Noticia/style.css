@@ -1,0 +1,189 @@
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+span {
+    height: 10vw;
+    border: medium solid;
+}
+
+/* Container Principal */
+.containerP {
+    display: flex;
+    gap: 30px;
+    padding: 30px 2px;
+    background-color: aqua;
+}
+
+.noticiaP-right {
+    border-radius: 15px;
+    width: 60%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.box1,
+.box2 {
+    height: 200px;
+    width: 100%;
+    margin-right: 5%;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.box1 {
+    background-image: url(./img/coracao.jpg);
+}
+
+.box2 {
+    margin-top: 20px;
+    background-image: url(./img/sangue.jpg);
+}
+
+.titulop {
+    margin-top: 10%;
+    margin-left: 5%;
+    width: 95%;
+}
+
+.textop {
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 90%;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+/*** SEGUNDA PARTE ***/
+/* Esqueleto */
+/*Left*/
+#container2 {
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    border: medium solid;
+}
+
+#leftnoticias {
+    border: medium solid;
+    display: grid;
+    width: 66%;
+}
+
+#noticias0 {
+    display: flex;
+}
+
+#texto {
+    display: inline-block;
+    margin-top: 5vh;
+}
+
+/*Right*/
+#topnot {
+    border: medium solid;
+    display: grid;
+    width: 33%;
+}
+
+#titulotop {
+    margin-top: 2vw;
+    margin-left: 5vw;
+    height: 1vw;
+}
+
+#top1 {
+    margin-top: 2vw;
+    margin-left: 2vw;
+    height: 10vw;
+    width: 25vw;
+    border: medium solid;
+}
+
+#outrostop {
+    margin-top: 2vw;
+    margin-left: 2vw;
+    height: 10vw;
+    width: 25vw;
+    border: medium solid;
+}
+
+P {
+    margin-top: 1vw;
+}
+
+/********** Fim do Esqueleto **********/
+
+#outrosbox {
+    background-image: url(./img/menino.jpg);
+    height: 15vw;
+    width: 30vw;
+    border-radius: 20px;
+    margin-right: 8%;
+    margin-left: 3%;
+    background-position: center;
+}
+
+#outrosbox2 {
+    margin-top: 2vh;
+    background-image: url(./img/menino.jpg);
+    height: 15vw;
+    width: 30vw;
+    border-radius: 20px;
+    margin-right: 8%;
+    margin-left: 3%;
+    background-position: center;
+}
+
+h3 {
+    margin-left: 2%;
+}
+
+
+
+
+/* Media Queries para melhorar a responsividade */
+@media (max-width: 768px) {
+    .containerP {
+        flex-direction: column;
+    }
+
+    .noticiaP-right {
+        width: 100%;
+    }
+
+    .box1,
+    .box2 {
+        width: 100%;
+    }
+
+    #outrosbox {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #leftnoticias {
+        width: 100%;
+    }
+
+    #topnot {
+        width: 100%;
+    }
+}

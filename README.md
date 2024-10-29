@@ -12,7 +12,7 @@ Diante desse contexto, o presente trabalho propõe o desenvolvimento de uma plat
 
 ## Integrantes
 
-* Ester Messias
+* Ester Messias da Silva
 * Ana Carolina Nunes
 * Lívia de Sousa
 * Kesley Pereira

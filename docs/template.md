@@ -11,26 +11,57 @@ Detalhe os layouts que serão utilizados. Apresente onde será colocado o logo d
 
 ## Cores
 
-Apresente a paleta de cores que será utilizada. Uma ferramenta interessante para a criação de palestas de cores é o *Adobe Color* ([https://color.adobe.com/pt/create/color-wheel](https://color.adobe.com/pt/create/color-wheel)).
+![AdobeColor-My Color Theme](https://github.com/user-attachments/assets/8f370ee3-8444-4cb8-aeb5-4f197c6c6ff4)
+
+criado em : https://color.adobe.com/pt/create/
+
 
 
 ## Tipografia
 
-Apresente as fontes que serão utilizadas e sua função no site. As principais funções são: Título de página, Título de Seção, Rótulos de componentes e Corpo de Texto.
+### Poppins
+Função: Títulos de página e Títulos de Seção
+Link: https://fonts.google.com/specimen/Poppins
+
+### Roboto
+Função: Parágrafos e Descrições
+Link: https://fonts.google.com/specimen/Roboto
 
 
 ## Iconografia
 
-Defina os ícones que serão utilizados e suas respectivas funções.
+### Icone Perfil
 
-Apresente os estilos CSS criados para cada um dos elementos apresentados.
-Outras seções podem ser adicionadas neste documento para apresentar padrões de componentes, de menus, etc.
+O ícone permanecerá no lugar da foto do usuário até que ele decida trocá-lo.
 
+<img src="./img/img_docs/icons/iconePerfil.png" alt="home" width="80"/>
 
-> **Links Úteis**:
->
-> -  [Como criar um guia de estilo de design da Web](https://edrodrigues.com.br/blog/como-criar-um-guia-de-estilo-de-design-da-web/#)
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+### Icone Menu
+
+O ícone de menu ficará no canto esquerdo da página de interface. Seu objetivo é ocultar ou mostrar os filtros ao ser clicado.
+
+<img src="./img/img_docs/icons/iconeMenu.png" alt="home" width="80"/>
+
+### Icone Calendario
+
+Ícone de calendário que ficara na pagina de eventos. Ao clicar, direciona para o contêiner de calendário abaixo.
+
+<img src="./img/img_docs/icons/iconeCalendario.png" alt="home" width="80"/>
+
+### Icone Compartilhamento
+
+Ícone para compartilhar. Ao clicar, abrirá um pop-up para escolher a rede social.
+
+<img src="./img/img_docs/icons/IconeCompartilha.png" alt="home" width="80"/>
+
+### Icone Telefone
+
+Ícone ilustrativo que ficará ao lado do número de telefone.
+
+<img src="./img/img_docs/icons/iconeTelefone.png" alt="home" width="80"/>
+
+### Icones Redes Sociais
+
+Ícones para compartilhar diretamente na rede específica.
+
+<img src="./img/img_docs/icons/IconeRedeSocial.png" alt="home" width="250"/>
