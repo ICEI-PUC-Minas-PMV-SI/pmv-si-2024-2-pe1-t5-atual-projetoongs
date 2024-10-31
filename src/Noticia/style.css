@@ -32,7 +32,6 @@ span {
     flex-direction: column;
 }
 
-
 #tituloP {
     margin-top: 10%;
     margin-left: 5%;
@@ -85,7 +84,6 @@ span {
     padding: 10px;
     /* Opcional: para espaçamento extra */
 }
-
 
 /*** SEGUNDA PARTE ***/
 /* Esqueleto */
@@ -242,7 +240,6 @@ p {
     #leftnoticias {
         width: 100%;
     }
-
     #topAssuntos {
         width: 100%;
     }

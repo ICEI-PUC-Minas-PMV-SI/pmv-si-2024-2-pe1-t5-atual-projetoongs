@@ -15,10 +15,9 @@ body{
 
 header{
   background-color: #4EABF1;
-  height: 60px;
+  height: 80px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   padding: 0px 40px;
 }
 
@@ -33,13 +32,21 @@ main{
 
 #div-logotipo{
   height: 100%;
-  width: auto;
+  width: 50%;
   display: flex;
   align-items: center;
+  padding-top: 10px;
+  gap: 70px;
+  input{
+    height: 40px;
+    border-radius: 8px;
+    width: 50%;
+    padding-left: 10px;
+  }
 }
 
 #logotipo{
-  height: 70%;
+  height: 100px;
 }
 
 /* --------------Sessão barra de pesquisa----------------------*/
@@ -47,10 +54,12 @@ main{
 
 /* -------------------Sessão Navbar-----------------------------*/
 #div-navbar{
-  
   display: flex;
   flex-direction: row;
+  justify-content: end;
   gap: 100px;
+  padding-right: 90px;
+  width: 50%;
 }
 
 #navbar{
@@ -71,11 +80,51 @@ main{
   height: 100%;
   display: flex;
   align-items: center;
+  background-color: transparent;
 }
 
 #user-icon{
   height: 60%;
 }
+
+#menu-icon{
+  display: none;
+  height: 60%;
+  width: 20px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 /* ---------------------------- FOOTER ------------------------*/
 
@@ -122,7 +171,6 @@ footer{
 }
 
 #footer-contato{
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,4 +209,164 @@ footer{
     height: 30px;
     cursor: pointer;
   }
+}
+
+
+/* -----------------------MEDIA QUERIE ------------------------*/
+
+@media (max-width: 600px) {
+
+  header{
+    height: 80px;
+    padding: 0px 30px;
+  }
+  
+  #div-logotipo{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    gap: 10px;
+    input{
+      height: 40px;
+      width: 100%px;
+      padding-left: 10px;
+    }
+  }
+  
+  #logotipo{
+    height: 70px;
+  }
+  
+  #div-navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 10px;
+    padding-right: 5px;
+    width: 20%;
+  }
+  
+  #navbar{
+    display: none;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .opcao-pagina{
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+  }
+
+  #div-user-icon{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+  }
+  
+  #user-icon{
+    height: 60%;
+    display: none;
+  }
+  
+  #menu-icon{
+    display: flex;
+    height: 40px;
+    width: 40px;
+    margin-right: 20px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  /* -------------- FOOTER -------------*/
+
+  footer{
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-between;
+    padding: 30px;
+  }
+
+  #footer-sec{
+    gap: 8px;
+  }
+
+  #footer-menu{
+    gap: 5px;
+    a{
+      font-size: 10px;
+    }
+    h3{
+      font-size: 12px;
+    }
+  }
+
+  #footer-infos{
+    a{
+      font-size: 10px;
+    }
+    h3{
+      font-size: 12px;
+    }
+  }
+
+  #footer-redes{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    img{
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  }
+
+  #footer-contato{
+    padding: 12px;
+    gap: 10px;
+    input{
+      height: 25px;
+      width: 250px;
+    }
+    textarea{
+      width: 250px;
+    }
+    button{
+      margin: 5px 0px;
+    }
+  }
+
 }

@@ -1,0 +1,89 @@
+/* MAIN -----------------------------------------------------------*/
+
+main {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* dashboard --------------------------------------------*/
+
+#dashboard{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-bottom: 80px;
+}
+
+/* card perfil --------------------------------------------*/
+
+#perfil-dash{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+#nome-ong{
+  
+}
+
+#bio-ong{
+  margin-top: 20px;
+  font-size: 12px;
+  line-height: 16px;
+  width: 80%;
+  color: #aaa;
+}
+
+/*--------------------------------------------*/
+
+#row-group{
+  padding: 30px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #fff;
+}
+
+/* dashboard: linha 1 --------------------------------------------*/
+
+.row-1-dash{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.row-1-card-dash{
+  border: 2px solid #f6f6f6;
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 28px;
+  font-size: 12px;
+}
+
+/* dashboard: linha 3 --------------------------------------------*/
+
+.row-3-dash{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.row-3-card-dash{
+  border: 2px solid #f6f6f6;
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 28px;
+  justify-content: center;
+}

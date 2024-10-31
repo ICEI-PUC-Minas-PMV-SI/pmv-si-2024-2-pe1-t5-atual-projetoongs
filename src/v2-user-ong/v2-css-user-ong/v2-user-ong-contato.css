@@ -1,0 +1,84 @@
+#contato{
+  background-color: #F5F9F8;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  gap: 100px;
+  width: 100%;
+}
+
+.infos-mapa{
+  padding: 10px;
+}
+
+.img-mapa{
+  width: 300px;
+}
+
+.info-mapa-rua{
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.info-mapa-tel{
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.info-mapa-email{
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.form-contato{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.nome-contato{
+  height: 30px;
+  width: 300px;
+  border-radius: 5px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  background-color: #e6e6e6;
+}
+
+.sobrenome-contato{
+  height: 30px;
+  width: 300px;
+  border-radius: 5px;
+  padding-left: 10px;
+  background-color: #e6e6e6;
+}
+
+.enviar-contato{
+  margin-top: 20px;
+  height: 30px;
+  width: 300px;
+  background-color: #AD94E5;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+textarea{
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #e6e6e6;
+}
+
+.label-contato{
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.label-contato-msg{
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 12px;
+}

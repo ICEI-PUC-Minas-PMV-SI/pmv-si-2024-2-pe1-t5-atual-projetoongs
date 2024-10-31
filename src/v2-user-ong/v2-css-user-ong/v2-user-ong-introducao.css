@@ -1,0 +1,89 @@
+*{
+  font-family: Poppins;
+}
+
+.introducao{
+  background-color: #F5F9F8;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 35px;
+  width: 90%;
+}
+
+.intro-infos{
+  width: 45%;
+  margin-left: 60px;
+}
+
+.intro-titulo{
+  font-size: 30px;
+}
+
+.intro-subtitulo{
+  color: #AAAAAA;
+  font-size: 18px;
+}
+
+.intro-div-tags{
+  display: flex;
+  gap: 20px;
+  height: 30px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.intro-tag-um{
+  border: 2px solid #AD94E5;
+  border-radius: 8px;
+  height: 20px;
+  width: 70px;
+  font-size: 10px;
+  align-content: center;
+  text-align: center;
+}
+
+.intro-tag-dois{
+  border: 2px solid #86D1E6;
+  border-radius: 8px;
+  height: 20px;
+  width: 90px;
+  font-size: 10px;
+  align-content: center;
+  text-align: center;
+}
+
+.intro-bio{
+  font-size: 12px;
+  color: #8D9194;
+  margin-top: 30px;
+  line-height: 16px;
+}
+
+.intro-div-btn{
+  height: 50px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.intro-btn-ver{
+  padding: 10px 20px;
+  background-color: #86D1E6;
+  color: white;
+  border-radius: 5px;
+}
+
+.intro-btn-contato{
+  padding: 10px 20px;
+  background-color: #AD94E5;
+  color: white;
+  border-radius: 5px;
+}
+
+.intro-img{
+  width: 40%;
+  height: 600px;
+}

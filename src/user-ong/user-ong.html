@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil</title>
-  <script src="./user-ong.js"></script>
   <link rel="stylesheet" href="./css-user-ong/user-ong.css">
   <link rel="stylesheet" href="../gerais/geral.css">
   <link rel="stylesheet" href="./css-user-ong/user-ong-dashboard.css">
@@ -14,21 +13,44 @@
 </head>
 
 <body>
+  <script src="../gerais/geral.js"></script>
+  <script src="./user-ong.js"></script>
   <header>
     <div id="div-logotipo">
-      <img id="logotipo" src="https://cdn.icon-icons.com/icons2/2070/PNG/512/toucan_icon_125604.png" alt="">
+      <img id="logotipo" src="../img/logo-2.png" alt="">
+      <input type="text" placeholder="pesquisar por...">
     </div>
 
     <div id="div-navbar">
       <nav id="navbar">
-        <a class="opcao-pagina" href="">HOME</a>
-        <a class="opcao-pagina" href="">NOTICIAS</a>
+        <a class="opcao-pagina" href="#">HOME</a>
+        <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
         <a class="opcao-pagina" href="">EVENTOS</a>
         <a class="opcao-pagina" href="">QUEM SOMOS</a>
       </nav>
 
-      <div id="div-user-icon">
-        <img id="user-icon" src="https://icons.veryicon.com/png/o/miscellaneous/bitisland-world/person-18.png" alt="">
+      <div class="dropdown">
+        <button id="div-user-icon">
+          <img id="user-icon" src="../img/avatar-padrao.png" alt="">
+        </button>
+        <div class="dropdown-content">
+          <a onclick="meuPerfil()" href="">Meu Perfil</a>
+          <a href="#">Configurações</a>
+          <a onclick="sairPerfil()" href="#">Sair</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button id="div-user-icon">
+          <img id="menu-icon" src="../img/menu.png" alt="">
+        </button>
+        <div class="dropdown-content">
+          <a class="opcao-pagina" href="#">HOME</a>
+          <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
+          <a class="opcao-pagina" href="">EVENTOS</a>
+          <a class="opcao-pagina" href="">QUEM SOMOS</a>
+          <a class="opcao-pagina" onclick="meuPerfil()" href="">MEU PERFIL</a>
+          <a class="opcao-pagina" onclick="sairPerfil()" href="#">SAIR</a>
+        </div>
       </div>
     </div>
 
@@ -132,14 +154,41 @@
           <h3 class="reg-card-h3">Lorem Ipsum</h3>
           <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
         </div>
-        <div id="reg-btn-div"><button id="reg-btn">+</button></div>
+        <div id="reg-btn-div"><button onclick="abreReg()" id="reg-btn">+</button></div>
+
+        <div id="modalRegistro" class="modalRegistro">
+          <div class="m-main">
+            <div class="m-reg-img">
+              <img src="../img/img-padrao.png" alt="">
+              <p>selecione a foto</p>
+              <input type="file">
+            </div>
+
+            <div class="m-reg-left">
+              <div class="m-titulo">
+                <span class="m-fechar">&times;</span>
+                <h2>Novo Registro</h2>
+              </div>
+
+              <form class="m-form">
+                <label class="m-reg-label" for="m-reg-titulo">Titulo</label>
+                <input class="m-reg-input" placeholder="Digite..." type="text" id="m-reg-titulo" name="m-reg-titulo" required />
+
+                <label class="m-reg-label" for="m-reg-desc">Descrição</label>
+                <input class="m-reg-input" placeholder="Digite..." type="texto" id="m-reg-desc" name="m-reg-desc" required />
+
+                <button type="button" class="m-reg-btn">Criar</button>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="projetos">
       <div id="pj-info">
         <h2 id="pj-titulo">Projetos</h2>
-        <button id="pj-btn">+</button>
+        <button onclick="abreProj()" id="pj-btn">+</button>
       </div>
       <div id="pj-main">
         <div class="pj-card">
@@ -191,6 +240,34 @@
         </div>
 
       </div>
+
+      <div id="modalProjetos" class="modalProjetos">
+        <div class="m-proj-main">
+          <div class="m-proj-img">
+            <img src="../img/img-padrao.png" alt="">
+            <small>selecione a foto</small>
+            <input type="file">
+          </div>
+
+          <div class="m-proj-left">
+            <div class="m-proj-infos">
+              <span class="m-fechar">&times;</span>
+              <h2>Novo Projeto</h2>
+            </div>
+
+            <form class="m-proj-form">
+              <label class="m-proj-label" for="m-proj-titulo">Titulo</label>
+              <input class="m-proj-input" placeholder="Digite..." type="text" id="m-proj-titulo" name="m-proj-titulo" required />
+
+              <label class="m-proj-label" for="m-proj-desc-g">Descrição</label>
+              <textarea placeholder="Digite..." name="m-proj-desc-g" class="m-proj-desc-g"></textarea>
+              <small>maximo 400 caracteres</small>
+              <button type="button" class="m-proj-btn">Criar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
     </section>
   </main>
 
@@ -198,19 +275,18 @@
     <section id="footer-sec">
       <div id="footer-menu">
         <h3>Projeto ONGs</h3>
-        <a href="">Home</a>
-        <a href="">Noticias</a>
+        <a href="#">Home</a>
+        <a href="./Noticia/noticia.html">Noticias</a>
         <a href="">Eventos</a>
         <a href="">Voluntariados - Informações</a>
         <a href="">FAQ</a>
         <a href="">Trabalhe Conosco</a>
         <a href="">Termos do Site e Politica de privacidade</a>
         <section id="footer-redes">
-          <img src="../img/ig-icon.png" alt="ig">
-          <img src="../img/face-icon.png" alt="fc">
-          <img src="../img/x-icon.png" alt="tt">
-          <img style="background-color: white; border-radius: 100%;" src="../img/lkd-icon.png" alt="lkin">
-          <img src="../img/github-icon.png" alt="github">
+          <img src="../img/insta-b.png" alt="ig">
+          <img src="../img/face-b.png" alt="fc">
+          <img src="../img/lkn-b.png" alt="lkin">
+          <img src="../img/wpp-b.png" alt="whatsapp">
         </section>
       </div>
       <div id="footer-infos">
@@ -224,13 +300,13 @@
         <a href="">Causa Animal</a>
       </div>
     </section>
-    <div id="footer-contato">
-      <input placeholder="Nome..." type="text">
-      <input placeholder="Sobrenome..." type="text">
-      <input placeholder="Seu e-mail..." type="email">
-      <textarea placeholder="Escreva sua mensagem..." name="" id=""></textarea>
-      <button>enviar</button>
-    </div>
+    <form id="footer-contato">
+      <input id="nomeContato" required placeholder="*Nome..." type="text">
+      <input id="sobrenomeContato" placeholder="*Sobrenome..." type="text">
+      <input id="emailContato" placeholder="*Seu e-mail..." type="email">
+      <textarea id="msgContato" placeholder="*Escreva sua mensagem..." name="" id=""></textarea>
+      <button onclick="enviaInfosContato()" type="button">enviar</button>
+    </form>
   </footer>
 </body>
 
