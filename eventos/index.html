@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- FONTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <!-- PROPORÇÃO CELULAR-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum scale=1.0">
+    <title>Próximos Eventos</title>
+    <link rel="stylesheet" href="index.css">
+   </head>
+<body>
+ <div class="container"> <!---PASSAR AS INFORMAÇÕES PARA O BODY-->
+     <header> TESTE TESTE TESTE </header>
+
+ <div class="center"> <h2>PRÓXIMOS EVENTOS</h2>
+                <div>
+                    <!-- FOTO E TEXTO-->
+                    <div class="size">
+                        <div class="info"><img src="foto eventos 1.jpg" alt="Imagem Arredondada" class="imagem-arredondada"></div>
+                        <div class="info"><span class="color"> No próximo sábado, a ONG XXX promoverá o "Dia de Esperança" no parque central, reunindo a comunidade em torno da inclusão social. O evento contará com oficinas de arte, apresentações musicais e palestras inspiradoras, sendo aberto ao público de todas as idades. Além de arrecadar fundos para seus projetos, buscamos transformar o dia em uma celebração de solidariedade e esperança por um futuro mais justo. Convidamos a todas as crianças e adultos, juntos para participar de jogos e competições, como barracas de comidas locais. Teremos também a presença de uma ativista que vai compartilhar sua experiência na luta por direitos humanos. Vamos com a gente?</span></div>
+                     </div>
+                </div>
+
+                <div>
+                    <!-- BOTÕES LIGAÇÃO E VOLUNTARIAR-->
+                    <a href="tel:+553134083000" class="botao-ligacao"><img src="telefone.png" alt="Icones" width="20" height="20" margin-right: 2px;> CONTATO</a>          
+                 
+                
+    <button id="openPopup" class="botao-ligacao"><img src="icon.png" alt="Icones" width="20" height="20" margin-right: 2px;>VOLUNTÁRIOS</button> 
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+       <p>Tem interesse em se voluntariar? Preencha o formulário abaixo e um dos responsáveis entrará em contato com você! </p>
+        <form id="myForm">
+            <input type="text" id="inputText" placeholder="NOME COMPLETO" required>
+            <br>
+            <input type="text" id="inputText" placeholder="TELEFONE" required>
+            <br>
+        </form>
+    
+        <script>
+            
+            const form = document.getElementById('myForm');
+            const message = document.getElementById('message');
+    
+            
+            form.onsubmit = function(event) {
+                event.preventDefault(); 
+                const inputValue = document.getElementById('inputText').value;
+                message.textContent = `Você digitou: ${inputValue}`;
+                form.reset(); 
+            }
+        </script>
+        <p></p>
+         <button id="closePopup">ENVIAR</button>     
+    </div>
+    <script>
+        
+        const openPopup = document.getElementById('openPopup');
+        const closePopup = document.getElementById('closePopup');
+        const popup = document.getElementById('popup');
+        const overlay = document.getElementById('overlay');
+
+        
+        openPopup.onclick = function() {
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+        }
+
+        
+        closePopup.onclick = function() {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+
+        
+        overlay.onclick = function() {
+            popup.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+
+    </script>
+    <!-- BOTÇAO INFORMAÇÃO (não funciona)-->
+      <div>
+        <button id="openPopup" class="botao-ligacao">INFORMAÇÕES</button> 
+        <div class="overlay" id="overlay"></div>
+        <div class="popup" id="popup">
+           <p>Tem interesse em se voluntariar? Preencha o formulário abaixo e um dos responsáveis entrará em contato com você! </p>
+           <button id="closePopup">FECHAR</button>
+        </div> 
+        <script>
+            const openPopupButton = document.getElementById('openPopup');
+            const closePopupButton = document.getElementById('closePopup');
+            const popup = document.getElementById('popup');
+            const overlay = document.getElementById('overlay');
+    
+            openPopupButton.addEventListener('click', () => {
+                popup.style.display = 'block';
+                overlay.style.display = 'block';
+            });
+    
+            closePopupButton.addEventListener('click', () => {
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+            });
+    
+                overlay.addEventListener('click', () => {
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+            });
+        </script> 
+    </div>
+           
+
+
+
+    <p></p>
+
+       <!-- LISTA -->
+
+       
+             <div class="info">
+                <div class="list">
+                <h3>Formas de Ajudar</h3>
+                <p><li>1. Doação de cestas básicas</li>
+                <li>2. Doação de cobertores</li>
+                <li>2. Doação de cobertores</li>
+                <li>3. Doação de colchão</li>
+                <li>4. Doação de chinelos</li>
+                <li>5. Doação de itens de higiene pessoal</li>
+                <li>6. Doação de brinquedos</li>
+                <li>7. Participação na separação de kits</li>
+                <li>8. Participação na feira de arrecadação</li></p></div>
+                            
+             <div class="info"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.1334712295325!2d-43.931629400000006!3d-19.834304699999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6854c4c861df9%3A0x79238aabf4495e3d!2sR.%20Jos%C3%A9%20Ferreira%20Magalh%C3%A3es%2C%20341%20-%20Floramar%2C%20Belo%20Horizonte%20-%20MG%2C%2031742-093%2C%20Brasil!5e0!3m2!1spt-BR!2sus!4v1729317058900!5m2!1spt-BR!2sus" width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                    
+        </div>
+        
+                 
+         
+        <footer> 
+            <div class="calendar">
+                <!--TAG SECTION, TIRAR DO FOOTER-->
+                <h3>Outubro de 2024</h3>
+             <table>
+                <thead>
+                    <tr>
+                        <th>Dom</th>
+                        <th>Seg</th>
+                        <th>Ter</th>
+                        <th>Qua</th>
+                        <th>Qui</th>
+                        <th>Sex</th>
+                        <th>Sáb</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td class="destaque">3</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td class="destaque">10</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td class="destaque">29</td>
+                        <td>30</td>
+                        <td>31</td>
+                        <td></td>
+                    </tr>
+                     </tbody> </table></div>
+           </footer>
+        
+        </div>
+         
+</body>
+</html>
