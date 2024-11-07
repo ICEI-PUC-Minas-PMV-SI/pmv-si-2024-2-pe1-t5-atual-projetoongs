@@ -53,3 +53,45 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | Conteúdo       | Texto             | Conteúdo da notícia                       | Sistemas de Informação da PUC Minas é eleito o melhor curso do Brasil                            |
 | Id do usuário  | Numero (Inteiro)  | Identificador do usuário autor da notícia | 1                                              |
 
+### Cadastro de Usuários - Doador
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Titulo         | Tetxo             | Titulo da página                          | Cadastre-se no Projeto ONG's                   |
+| Id             | Numero (Inteiro)  | Identificador único do usuário            | 1                                              |
+| Nome           | Texto             | Primeiro nome do usuário                  | João                                           |
+| Sobrenome      | Texto             | Segundo nome do usuário                   | Pedro Souza                                    |
+| User           | Texto             | Nome de usuário unico                     | jp_souza                                       |
+| Email          | Texto             | Email do usuário                          | jp_souza@gmail.com                             |
+| Senha          | Senha             | Senha do usuário                          | 12345678                                       |
+| Botão          | Submit            | Botão de finalizar cadastro               |                                                |
+
+### Cadastro de Usuários - ONG
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Titulo         | Tetxo             | Titulo da página                          | Cadastre-se no Projeto ONG's                   |
+| Id             | Numero (Inteiro)  | Identificador único da instituição        | 1                                              |
+| Nome           | Texto             | Nome da instituição                       | GRAAC                                          |
+| User           | Texto             | Nome de usuário unico                     | graac_br                                       |
+| Email          | Texto             | Email da instituição                      | graac_br@gmail.com                             |
+| Senha          | Senha             | Senha do usuário                          | 12345678                                       |
+| Botão          | Submit            | Botão de finalizar cadastro               |                                                |
+
+### Login de Usuários
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+| Titulo         | Tetxo             | Titulo da página                          | Cadastre-se no Projeto ONG's                   |
+| User           | Texto             | Nome de usuário unico                     | graac_br                                       |
+| Email          | Texto             | Email da instituição                      | graac_br@gmail.com                             |
+| Senha          | Senha             | Senha do usuário                          |                                                |
+| Botão          | Submit            | Botão de finalizar cadastro               |                                                |
+
+### Página de usuário - ONG
+|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
+|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
+|                |                   |                                           |                                                |
+|                |                   |                                           |                                                |
+|                |                   |                                           |                                                |
+|                |                   |                                           |                                                |
+|                |                   |                                           |                                                |
+|                |                   |                                           |                                                |
+
