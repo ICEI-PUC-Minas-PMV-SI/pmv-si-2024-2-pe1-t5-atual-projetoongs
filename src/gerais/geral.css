@@ -30,12 +30,12 @@ main{
 
 /* -------------------Sessão Logotipo-----------------------*/
 
-#div-logotipo{
+#div-search{
   height: 100%;
   width: 50%;
   display: flex;
+  margin-left: 20px;
   align-items: center;
-  padding-top: 10px;
   gap: 70px;
   input{
     height: 40px;
@@ -45,8 +45,24 @@ main{
   }
 }
 
+.div-logotipo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  line-height: 3%;
+  padding-bottom: 15px;
+}
+
+.logo-title{
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px #000000;
+}
+
 #logotipo{
-  height: 100px;
+  height: 50px;
 }
 
 /* --------------Sessão barra de pesquisa----------------------*/
@@ -57,8 +73,7 @@ main{
   display: flex;
   flex-direction: row;
   justify-content: end;
-  gap: 100px;
-  padding-right: 90px;
+  gap: 50px;
   width: 50%;
 }
 
@@ -74,6 +89,15 @@ main{
   font-weight: bold;
 }
 
+#login-btn{
+  color: black;
+}
+
+#login-btn:hover{
+  color: white;
+  font-size: 14px;
+}
+
 /* ---------------------Sessão icon--------------------------*/
 
 #div-user-icon{
@@ -85,6 +109,7 @@ main{
 
 #user-icon{
   height: 60%;
+  border-radius: 50%;
 }
 
 #menu-icon{
