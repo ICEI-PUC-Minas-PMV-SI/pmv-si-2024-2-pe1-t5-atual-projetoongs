@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+}
+  
+
+/* Seção de banner */
+.banner {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.banner img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
+/* Seção de carrossel */
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.carousel img {
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Seção sobre (Quem somos) */
+.about-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    color: #2190FB;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Seção de CTA (call to action) */
+.cta-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.cta-section div {
+    width: 45%;
+    padding: 20px;
+    background-color: #86D1E6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cta-section div h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: #2190FB;
+    margin-bottom: 15px
+    ;
+}

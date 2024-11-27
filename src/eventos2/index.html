@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="port-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum scale=1.0">
+    <title>Próximos Eventos</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../gerais/geral.css">
+    <!-- FONTES-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <header>
+        <div id="div-logotipo">
+            <img id="logotipo" src="../img/logo-2.png" alt="">
+            <input type="text" placeholder="pesquisar por...">
+        </div>
+
+        <div id="div-navbar">
+            <nav id="navbar">
+                <a class="opcao-pagina" href="../../index.html">HOME</a>
+                <a class="opcao-pagina" href="../listagem-ongs/listagem-ongs.html">ONGS</a>
+                <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
+                <a class="opcao-pagina" href="../eventos2/index.html">EVENTOS</a>
+                <a class="opcao-pagina" href="">QUEM SOMOS</a>
+            </nav>
+
+            <div class="dropdown">
+                <button id="div-user-icon">
+                    <img id="user-icon" src="../img/avatar-padrao.png" alt="">
+                </button>
+                <div class="dropdown-content">
+                    <a href="../user-ong/user-ong.html">Meu Perfil</a>
+                    <!-- onclick="meuPerfil()" -->
+                    <a href="#">Configurações</a>
+                    <a onclick="sairPerfil()" href="#">Sair</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button id="div-user-icon">
+                    <img id="menu-icon" src="../img/menu.png" alt="">
+                </button>
+                <div class="dropdown-content">
+                    <a class="opcao-pagina" href="../../index.html">HOME</a>
+                    <a class="opcao-pagina" href="../src/Noticia/noticia.html">NOTICIAS</a>
+                    <a class="opcao-pagina" href="../src/eventos2/index.html">EVENTOS</a>
+                    <a class="opcao-pagina" href="">QUEM SOMOS</a>
+                    <a class="opcao-pagina" href="../src/user-ong/user-ong.html">MEU PERFIL</a>
+                    <!-- onclick="meuPerfil()" -->
+                    <a class="opcao-pagina" onclick="sairPerfil()" href="#">SAIR</a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="center">
+        <h2>PRÓXIMOS EVENTOS</h2>
+    </div>
+    <div><!-- FOTO E TEXTO-->
+        <div class="size">
+
+            <div>
+                <div class="info"><img src="img ong.png" alt="imagem arredondada" class="imagem-arredondada">
+                </div>
+            </div>
+            <div>
+                <div class="info">
+                    <span class="color"> No próximo sábado, a ONG XXX promoverá o "Dia de Esperança" no parque
+                        central, reunindo a comunidade em torno da inclusão social. O evento contará com oficinas de
+                        arte,
+                        apresentações musicais e palestras inspiradoras, sendo aberto ao público de todas as idades.
+                        Além de
+                        arrecadar fundos para seus projetos, buscamos transformar o dia em uma celebração de
+                        solidariedade e
+                        esperança por um futuro mais justo.</span>
+                    <p></p>
+
+                </div>
+                <p></p>
+
+                <div class="info"> <!--CONTATO E VOLUNTÁRIOS-->
+                    <a href="tel:+553134083000" class="botao-ligacao"><img src="telefone.png" alt "Icones" width="20" height="20" ;> CONTATO</a>
+                </div>
+                <!--VER ESPAÇO-->
+                <button id="openPopup" class="botao-ligacao"><img src="icon.png" alt="Icones" width="20" height="20">
+                    VOLUNTÁRIOS </button>
+                <div class="overlay" id="overlay"></div>
+                <div class="popup" id="popup">
+                    <p>Tem interesse em se voluntariar? Preencha o formulário abaixo e um dos responsáveis entrará em
+                        contato com você! </p>
+                    <form id="myForm">
+                        <div class="center">
+                            <input type="text" id="inputText" placeholder="NOME COMPLETO" required>
+                            <br>
+                            <input type="text" id="inputText" placeholder="TELEFONE" required>
+                            <br>
+                        </div>
+                    </form>
+
+                    <p></p>
+                    <div class="center">
+                        <buton id="closePopup">ENVIAR</buton>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+    <P></P>
+
+    <div>
+        <!--iINFORMAÇÃO,LOCALIZAÇÃO E DATA-->
+        <div class="info">
+
+            <button onclick="mostrarMensagem()" class="botao-ligacao">INFORMAÇÕES</button>
+        </div>
+        <div class="info">
+            <button onclick="mostrarMensagem()" class="botao-ligacao">LOCALIZAÇÃO</button>
+        </div>
+
+        <div class="info">
+            <div class="botao-ligacao">DATA: 20/10/24</div>
+        </div>
+
+
+    </div>
+    <p></p>
+
+    <div>
+        <div class="center">
+            <div class="size">
+                <div class="info">
+                    <div class="list">
+                        <h4 class="center">Formas de Ajudar</h4>
+                        <li>1. Doação de cestas básicas</li>
+                        <li>2. Doação de cobertores</li>
+                        <li>2. Doação de cobertores</li>
+                        <li>3. Doação de colchão</li>
+                        <li>4. Doação de chinelos</li>
+                        <li>5. Doação de itens de higiene pessoal</li>
+                        <li>6. Doação de brinquedos</li>
+                        <li>7. Participação na separação de kits</li>
+                        <li>8. Participação na feira de arrecadação</li>
+
+                    </div>
+                </div>
+
+                <div class="info">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.1334220483295!2d-43.93422062477528!3d-19.834306781532735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6854c4924366d%3A0x84aa2bfd9ce98eca!2sN%C3%BAcleo%20Assistencial%20Caminhos%20para%20Jesus!5e0!3m2!1spt-BR!2sus!4v1729748130253!5m2!1spt-BR!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="info">
+                    <!-- SUBSTITUÍDO POR GOOGLE CALENDAR--<div class="calendar">
+                        <h3>Outubro de 2024</h3>
+                        <table>
+                            <thead class="center">
+                                <tr class="center">
+                                    <th>Dom</th>
+                                    <th>Seg</th>
+                                    <th>Ter</th>
+                                    <th>Qua</th>
+                                    <th>Qui</th>
+                                    <th>Sex</th>
+                                    <th>Sáb</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="center">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td class="destaque">3</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                    <td class="destaque">10</td>
+                                    <td>11</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                    <td>17</td>
+                                    <td>18</td>
+                                </tr>
+                                <tr>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                    <td>24</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td class="destaque">29</td>
+                                    <td>30</td>
+                                    <td>31</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>-->
+
+                    <div class="info"><iframe src="https://calendar.google.com/calendar/embed?src=pt-br.brazilian%23holiday%40group.v.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="300" height="200" frameborder="0" scrolling="no"></iframe>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+    <p></p>
+    <p></p>
+
+    <div>
+        <div><!-- FOTO E TEXTO-->
+            <div class="size">
+
+                <div>
+                    <div class="info"><img src="cachorro ong.png" alt="imagem arredondada" class="imagem-arredondada">
+                    </div>
+                </div>
+                <div>
+                    <div class="info">
+                        <span class="color"> A ONG XXXX realizará um
+                            emocionante evento de adoção e conscientização sobre a importância do cuidado com os
+                            animais. O evento acontecerá no XXXX, às XXXX, e promete ser uma ótima
+                            oportunidade para encontrar um novo amigo de quatro patas.
+                            Além da adoção de cães resgatados, haverá atividades para toda a família, incluindo oficinas
+                            de adestramento, palestras sobre cuidados com pets e um espaço para interação com os
+                            animais.</span>
+                        <p></p>
+
+                    </div>
+                    <p></p>
+
+                    <div class="info"> <!--CONTATO E VOLUNTÁRIOS-->
+                        <a href="tel:+553134083000" class="botao-ligacao"><img src="telefone.png" alt "Icones" width="20" height="20" ;> CONTATO</a>
+                    </div>
+                    <!--VER ESPAÇO-->
+                    <button id="openPopup" class="botao-ligacao"><img src="icon.png" alt="Icones" width="20" height="20">
+                        VOLUNTÁRIOS </button>
+                    <div class="overlay" id="overlay"></div>
+                    <div class="popup" id="popup">
+                        <p>Tem interesse em se voluntariar? Preencha o formulário abaixo e um dos responsáveis entrará
+                            em
+                            contato com você! </p>
+                        <form id="myForm">
+                            <div class="center">
+                                <input type="text" id="inputText" placeholder="NOME COMPLETO" required>
+                                <br>
+                                <input type="text" id="inputText" placeholder="TELEFONE" required>
+                                <br>
+                            </div>
+                        </form>
+
+                        <p></p>
+                        <div class="center">
+                            <buton id="closePopup">ENVIAR</buton>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+        <P></P>
+
+        <div>
+            <!--iINFORMAÇÃO,LOCALIZAÇÃO E DATA-->
+            <div class="info" justify-content: left;>
+                <button onclick="mostrarMensagem()" class="botao-ligacao">INFORMAÇÕES</button>
+            </div>
+            <div class="info">
+                <button onclick="mostrarMensagem()" class="botao-ligacao">LOCALIZAÇÃO</button>
+            </div>
+
+            <div class="info">
+                <div class="botao-ligacao">DATA: 23/11/24</div>
+            </div>
+
+
+        </div>
+        <p></p>
+
+        <div>
+            <div class="center">
+                <div class="size">
+                    <div class="info">
+                        <div class="list">
+                            <h4 class="center">Formas de Ajudar</h4>
+                            <li>1. Doação de sacos de ração.</li>
+                            <li>2. Apadrinhando um cachorro.</li>
+                            <li>2. Apadrinhando um gato.</li>
+                            <li>3. Doação de casinhas.</li>
+                            <li>4. Doação de cobertores.</li>
+                            <li>5. Doação de vacinas.</li>
+                            <li>6. Doação de brinquedos.</li>
+                            <li>7. Participação na separação de ração.</li>
+                            <li>8. Participação na feira de adoção.</li>
+
+                        </div>
+                    </div>
+
+                    <div class="info">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.1334220483295!2d-43.93422062477528!3d-19.834306781532735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6854c4924366d%3A0x84aa2bfd9ce98eca!2sN%C3%BAcleo%20Assistencial%20Caminhos%20para%20Jesus!5e0!3m2!1spt-BR!2sus!4v1729748130253!5m2!1spt-BR!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <div class="info"><iframe src="https://calendar.google.com/calendar/embed?src=pt-br.brazilian%23holiday%40group.v.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="300" height="200" frameborder="0" scrolling="no"></iframe>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+    </div>
+
+    <div class="center">
+        <div class="conteudo" id="conteudo">
+            <p>Sem novos eventos no momento!</p>
+        </div>
+
+        <span class="botao" id="botao">VER MAIS</span>
+
+
+    </div>
+
+    <!-- ERROS- segunda página não abre componentes, formulário e o primeiro está mudando para tudo. -->
+    <footer>
+        <section id="footer-sec">
+            <div id="footer-menu">
+                <h3>Projeto ONGs</h3>
+                <a href="#">Home</a>
+                <a href="./src/Noticia/noticia.html">Noticias</a>
+                <a href="./src/eventos2/index.html">Eventos</a>
+                <a href="">Voluntariados - Informações</a>
+                <a href="">FAQ</a>
+                <a href="">Trabalhe Conosco</a>
+                <a href="">Termos do Site e Politica de privacidade</a>
+                <section id="footer-redes">
+                    <img src="../img/insta-b.png" alt="ig">
+                    <img src="../img/face-b.png" alt="fc">
+                    <img src="../img/lkn-b.png" alt="lkin">
+                    <img src="../img/wpp-b.png" alt="whatsapp">
+                </section>
+            </div>
+            <div id="footer-infos">
+                <h3>Causas</h3>
+                <a href="">Arte, cultura e esporte</a>
+                <a href="">Cidadania</a>
+                <a href="">Combate a fome</a>
+                <a href="">Combate a pobreza</a>
+                <a href="">Consumo consciente</a>
+                <a href="">Crianças e adolescentes</a>
+                <a href="">Causa Animal</a>
+            </div>
+        </section>
+        <form id="footer-contato">
+            <input id="nomeContato" required placeholder="*Nome..." type="text">
+            <input id="sobrenomeContato" placeholder="*Sobrenome..." type="text">
+            <input id="emailContato" placeholder="*Seu e-mail..." type="email">
+            <textarea id="msgContato" placeholder="*Escreva sua mensagem..." name="" id=""></textarea>
+            <button onclick="enviaInfosContato()" type="button">enviar</button>
+        </form>
+    </footer>
+
+
+</body>
+
+
+</html>
