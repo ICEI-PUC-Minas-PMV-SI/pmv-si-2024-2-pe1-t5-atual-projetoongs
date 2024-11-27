@@ -137,7 +137,7 @@ main {
 .row-2-card-dash{
   background-color: #F5F9F8;
   width: 100%;
-  height: 200px;
+  height: 300px;
   border-radius: 10px;
   display: flex;
   justify-content: space-around;
@@ -167,10 +167,16 @@ main {
 .row-3-card-dash{
   background-color: #F5F9F8;
   width: 100%;
-  height: 180px;
+  height: 130px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   padding: 10px 28px;
   justify-content: center;
+  p{
+    font-size: 12px;
+  }
+  h3{
+    font-size: 14px;
+  }
 }
