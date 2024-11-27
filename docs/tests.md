@@ -41,6 +41,22 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | Inserção de dados válidos no formulário de cadastro
 **Resultado obtido** | Sucesso
 
+**Caso de Teste** | **CT03 - Exportar Métricas**
+ :--------------: | ------------
+**Procedimento**  | 1) Faça login em [Projeto ONGs](https://icei-puc-minas-pmv-si.github.io/pmv-si-2024-2-pe1-t5-atual-projetoongs/) <br> 2) Clique em 'Meu Perfil' <br> 3) Na seção dos dashboards, clique em 'Gerar PDF' <br>
+**Requisitos associados** | RF-003
+**Resultado esperado** | Exportação e visualização das métricas em formato de arquivo
+**Dados de entrada** | Solicitação via cliques
+**Resultado obtido** | Arquivo gerado com sucesso
+
+**Caso de Teste** | **CT04 - Visualização de Métricas**
+ :--------------: | ------------
+**Procedimento**  | 1) Faça login em [Projeto ONGs](https://icei-puc-minas-pmv-si.github.io/pmv-si-2024-2-pe1-t5-atual-projetoongs/) <br> 2) Clique em 'Meu Perfil' <br> 
+**Requisitos associados** | RF-004 <br> RF-010
+**Resultado esperado** | Visualização das métricas online
+**Dados de entrada** | Acesso via cliques
+**Resultado obtido** | Sucesso
+
 ## Registro dos Testes de Software
 
 Esta seção deve apresentar o relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no plano de testes pré-definido. Documente cada caso de teste apresentando um vídeo ou animação que comprove o funcionamento da funcionalidade. Veja os exemplos a seguir.
