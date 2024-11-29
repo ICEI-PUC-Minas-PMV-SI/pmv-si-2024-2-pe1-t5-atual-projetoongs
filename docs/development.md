@@ -38,7 +38,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 | RF-004 | Desenvolver uma página onde as Instituições possam visualizar suas atividades, métricas mensais e relatórios de retorno | Ester       | user-ong.html       |
 | RF-005 | Desenvolver uma página com conteúdos básicos sobre gestão e negócio                                                     |             |                     |
 | RF-006 | Facilitar a busca por oportunidades de voluntariado                                                                     | Ana         | eventos/index.html  |
-| RF-007 | Notificar os usuários sobre novas oportunidades de voluntariado                                                         |             |                     |
+| RF-007 | Notificar os usuários sobre novas oportunidades de voluntariado                                                         |      Lívia       |                     |
 | RF-008 | permitir que o usuário cadastre suas preferências de área de atuação das ONGs                                           |             |                     |
 | RF-009 | Desenvolver uma página com o dashboard de dados mensais e semanais                                                      | Ester       | user-ong.html       |
 | RF-010 | permitir que os usuários doadores possam visualizar as métricas e ficar a par dos resultados das ONGs                   | Ester       | v2-user-ong.html    |
