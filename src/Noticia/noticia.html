@@ -7,108 +7,134 @@
     <title>Página de Notícia</title>
     <link rel="stylesheet" href="../gerais/geral.css">
     <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id = "noticia">
     <header>
         <div id="div-logotipo">
-            <img id="logotipo" src="https://cdn.icon-icons.com/icons2/2070/PNG/512/toucan_icon_125604.png" alt="Logo">
+            <img id="logotipo" src="../img/logo-2.png" alt="">
+            <input type="text" placeholder="pesquisar por...">
         </div>
 
         <div id="div-navbar">
             <nav id="navbar">
-                <a class="opcao-pagina" href="#">HOME</a>
-                <a class="opcao-pagina" href="#">NOTICIAS</a>
-                <a class="opcao-pagina" href="#">EVENTOS</a>
-                <a class="opcao-pagina" href="#">QUEM SOMOS</a>
+                <a class="opcao-pagina" href="../../index.html">HOME</a>
+                <a class="opcao-pagina" href="../listagem-ongs/listagem-ongs.html">ONGS</a>
+                <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
+                <a class="opcao-pagina" href="../eventos2/index.html">EVENTOS</a>
+                <a class="opcao-pagina" href="">QUEM SOMOS</a>
             </nav>
-            <div id="div-user-icon">
-                <img id="user-icon" src="https://icons.veryicon.com/png/o/miscellaneous/bitisland-world/person-18.png" alt="icone">
+
+            <div class="dropdown">
+                <button id="div-user-icon">
+                    <img id="user-icon" src="../img/avatar-padrao.png" alt="">
+                </button>
+                <div class="dropdown-content">
+                    <a href="../src/user-ong/user-ong.html">Meu Perfil</a>
+                    <!-- onclick="meuPerfil()" -->
+                    <a href="#">Configurações</a>
+                    <a onclick="sairPerfil()" href="#">Sair</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button id="div-user-icon">
+                    <img id="menu-icon" src="../img/menu.png" alt="">
+                </button>
+                <div class="dropdown-content">
+                    <a class="opcao-pagina" href="../../index.html">HOME</a>
+                    <a class="opcao-pagina" href="../src/Noticia/noticia.html">NOTICIAS</a>
+                    <a class="opcao-pagina" href="../src/eventos2/index.html">EVENTOS</a>
+                    <a class="opcao-pagina" href="">QUEM SOMOS</a>
+                    <a class="opcao-pagina" href="../src/user-ong/user-ong.html">MEU PERFIL</a>
+                    <!-- onclick="meuPerfil()" -->
+                    <a class="opcao-pagina" onclick="sairPerfil()" href="#">SAIR</a>
+                </div>
             </div>
         </div>
+
     </header>
 
     <!--PRIMEIRA PARTE-->
     <div>
-        <div id="containerP">
+        <div id="containerP">   
             <div id="noticiaP-right">
-                <h2 id="tituloP">Mundo: conheça brasileiros que transformam vidas com a economia solidária</h2>
-                <p id="textoP">Esperança, união e solidariedade: programa de sexta-feira (17) mostrou iniciativas que
-                    funcionam como uma semente de esperança em tempos difíceis.</p>
+                <a href="../ResumoNoticia/ResumoNoticia.html?id=noticiaP-right" target="_self">  
+                <h2 id="tituloP"></h2>
+                <p id="textoP"></p> 
+            </a>
             </div>
+        
             <div id="noticiaP-left">
+                <a href="../ResumoNoticia/ResumoNoticia.html?id=box1" target="_self">   
                 <div class="box" id="box1">
-                    <h3 class="subTitulo">Contamos com sua ajuda</h3>
+                    <h3 class="subTitulo"></h3>
                 </div>
+                </a>
+                <a href="../ResumoNoticia/ResumoNoticia.html?id=box2" target="_self">   
                 <div class="box" id="box2">
-                    <h3 class="subTitulo">Doação de sangue salva vidas</h3>
+                    <h3 class="subTitulo"></h3>
                 </div>
+                </a>
             </div>
         </div>
         <!----------SEGUNDA PARTE---------------------------------->
 
         <section id="container2">
-            <div id="leftNoticias">
-                <article class="noticias">
-                    <div class="outrosBox" id="imagem1"></div>
-                    <div id="texto">
-                        <h3 id="tituloOutros">Iniciativa Social Promove Inclusão Econômica de Mulheres em
-                            Vulnerabilidade</h3>
-                        <p id="outrasN"> ONG Mulheres em Ação anunciou a abertura de 200 novas vagas em cursos de
-                            capacitação para
-                            mulheres em situação de vulnerabilidade em São Paulo.</p>
+           <!-- <div id="noticias-container"></div>-->
+           <div id="leftNoticias">
+                <article class="noticias"> 
+                    <div class="outrosBox" id="imagem1"></div>                  
+                    <div class="texto" id = "T1">
+                        <a href="../ResumoNoticia/ResumoNoticia.html?id=T1" target="_self">  
+                        <h3 class="tituloOutros"></h3>
+                        <p class="outrasN"></p>  
+                        </a>  
                     </div>
+                    
                 </article>
                 <article class="noticias">
                     <div class="outrosBox" id="imagem2"></div>
-                    <div id="texto">
-                        <h3 id="tituloOutros">Projeto Inovador Restaura Ecossistemas Costeiros Ameaçados no Nordeste
-                        </h3>
-                        <p id="outrasN">Uma nova iniciativa da ONG Verde para Todos foi lançada esta semana, com o
-                            objetivo de
-                            recuperar manguezais degradados na costa nordestina do Brasil.</p>
+                    <div class="texto" id="T2">
+                        <a href="../ResumoNoticia/ResumoNoticia.html?id=T2" target="_self">   
+                            <h3 class="tituloOutros" >  </h3>
+                            <p class="outrasN" id="R2"></p>
+                        </a>
                     </div>
-                </article>
+                </article>                
                 <article class="noticias">
                     <div class="outrosBox" id="imagem3"></div>
-                    <div id="texto">
-                        <h3 id="tituloOutros"> Campanha Humanitária Arrecada Fundos para Combater a Fome em Áreas
-                            Afetadas pela Crise
-                            Climática</h3>
-                        <p id="outrasN"> ONG internacional Aliança Global Contra a Fome lançou uma campanha de
-                            emergência para
-                            arrecadar fundos destinados a apoiar comunidades em países africanos severamente afetados
-                            pela crise climática.</p>
+                    <div class="texto" id = "T3">
+                        <a href="../ResumoNoticia/ResumoNoticia.html?id=T3" target="_self">   
+                        <h3 class="tituloOutros"></h3>
+                        <p class="outrasN"></p>
+                        </a>
                     </div>
                 </article>
                 <article class="noticias">
                     <div class="outrosBox" id="imagem4"></div>
-                    <div id="texto">
-                        <h3 id="tituloOutros">O Impacto das ONGs na Sociedade Moderna</h3>
-                        <p id="outrasN">As Organizações Não Governamentais (ONGs) desempenham um papel crucial na
-                            sociedade contemporânea. Elas atuam em diversas áreas, como direitos humanos, meio ambiente,
-                            saúde, educação e desenvolvimento comunitário. </p>
+                    <div class="texto" id = "T4">
+                        <a href="../ResumoNoticia/ResumoNoticia.html?id=T4" target="_self">   
+                        <h3 class="tituloOutros"></h3>
+                        <p class="outrasN"></p>
+                        </a>
                     </div>
                 </article>
-            </div>
+            </div> 
 
             <aside id="topAssuntos">
                 <h2 id="titulotoP">Top Noticias</h2>
                 <nav id="top">
-                    <a class="top1" href="#">
-                        <h3> Organização Ambiental Fomenta Energias Renováveis em Regiões Carentes </h3>
-                        <p>A ONG Energia Sustentável para Todos está implementando um projeto que visa levar energias
-                            renováveis, como a solar e a eólica, a comunidades rurais de baixa renda no interior do
-                            Brasil.</p>
+                    <a class="top1" id ="TP1" href="../ResumoNoticia/ResumoNoticia.html?id=TP1" target="_self">
+                        <h3></h3>
+                        <p></p>
                     </a>
-
-                    <a class="top1" href="#">
-                        <h3>Iniciativa Ambiental: ONG Mobiliza Comunidades para Limpeza de Rios e Praias</h3>
-                        <p>Com a campanha Águas Limpas, a ONG Verde Vivo organizou mutirões de voluntários em diversas
-                            cidades para a retirada de lixo das margens de rios e praias. </p>
+                    <a class="top1" id ="TP2" href="../ResumoNoticia/ResumoNoticia.html?id=TP2" target="_self"> 
+                        <h3></h3>
+                        <p></p>
                     </a>
-
-                    <a class="top1" href="#">
-                        <h3>ONG Lança Programa de Apoio Psicológico para Jovens em Situação de Vulnerabilidade</h3>
-                        <p>A ONG Caminhos para o Futuro lançou um projeto voltado para o suporte emocional de jovens em
-                            situação de vulnerabilidade.</p>
+                    <a class="top1" id = "TP3" href="../ResumoNoticia/ResumoNoticia.html?id=TP3" target="_self">                     
+                        <h3></h3>
+                        <p></p>
                     </a>
                 </nav>
             </aside>
@@ -120,40 +146,39 @@
             <div id="footer-menu">
                 <h3>Projeto ONGs</h3>
                 <a href="#">Home</a>
-                <a href="#">Noticias</a>
-                <a href="#">Eventos</a>
-                <a href="#">Voluntariados - Informações</a>
-                <a href="#">FAQ</a>
-                <a href="#">Trabalhe Conosco</a>
-                <a href="#">Termos do Site e Politica de privacidade</a>
+                <a href="./src/Noticia/noticia.html">Noticias</a>
+                <a href="./src/eventos2/index.html">Eventos</a>
+                <a href="">Voluntariados - Informações</a>
+                <a href="">FAQ</a>
+                <a href="">Trabalhe Conosco</a>
+                <a href="">Termos do Site e Politica de privacidade</a>
                 <section id="footer-redes">
-                    <img src="../img/ig-icon.png" alt="instagram">
-                    <img src="../img/face-icon.png" alt="facebook">
-                    <img src="../img/x-icon.png" alt="twiter">
-                    <img style="background-color: white; border-radius: 100%;" src="../img/lkd-icon.png" alt="Lin">
-                    <img src="../img/github-icon.png" alt="github">
+                    <img src="../img/insta-b.png" alt="ig">
+                    <img src="../img/face-b.png" alt="fc">
+                    <img src="../img/lkn-b.png" alt="lkin">
+                    <img src="../img/wpp-b.png" alt="whatsapp">
                 </section>
             </div>
             <div id="footer-infos">
                 <h3>Causas</h3>
-                <a href="#">Arte, cultura e esporte</a>
-                <a href="#">Cidadania</a>
-                <a href="#">Combate a fome</a>
-                <a href="#">Combate a pobreza</a>
-                <a href="#">Consumo consciente</a>
-                <a href="#">Crianças e adolescentes</a>
-                <a href="#">Causa Animal</a>
+                <a href="">Arte, cultura e esporte</a>
+                <a href="">Cidadania</a>
+                <a href="">Combate a fome</a>
+                <a href="">Combate a pobreza</a>
+                <a href="">Consumo consciente</a>
+                <a href="">Crianças e adolescentes</a>
+                <a href="">Causa Animal</a>
             </div>
         </section>
-        <div id="footer-contato">
-            <input placeholder="Nome..." type="text">
-            <input placeholder="Sobrenome..." type="text">
-            <input placeholder="Seu e-mail..." type="email">
-            <textarea placeholder="Escreva sua mensagem..." name="Nome" id=""></textarea>
-            <button>enviar</button>
-        </div>
+        <form id="footer-contato">
+            <input id="nomeContato" required placeholder="*Nome..." type="text">
+            <input id="sobrenomeContato" placeholder="*Sobrenome..." type="text">
+            <input id="emailContato" placeholder="*Seu e-mail..." type="email">
+            <textarea id="msgContato" placeholder="*Escreva sua mensagem..." name="" id=""></textarea>
+            <button onclick="enviaInfosContato()" type="button">enviar</button>
+        </form>
     </footer>
-    <!-- <script src="./script.js"></script>-->
-    </body>
+    <script src="./script.js"></script>
+</body>
 
 </html>
