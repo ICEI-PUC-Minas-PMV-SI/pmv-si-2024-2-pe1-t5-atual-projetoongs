@@ -253,6 +253,17 @@ button {
   button:hover svg {
     transform: rotate(45deg);
   }
+#codigoAlteracao{
+  margin-top: 2%;
+}
+#validarCodigoAlteracao,#confirmarTroca,#validarCodigoExclusao{
+  margin-top: 2%;
+  margin-left: 38%;
+}
+#alterarEmail,#alterarSenha{
+  margin-top: 2%;
+  margin-left: 10%;
+}
 
 /**INPUT**/
 .input {

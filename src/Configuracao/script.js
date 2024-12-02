@@ -50,7 +50,8 @@ const codigoExclusao = document.getElementById('codigoExclusao');
 const validarCodigoExclusao = document.getElementById('validarCodigoExclusao');
 
 // Evento para mostrar ou esconder as opções de alteração (e-mail ou senha)
-alterarEmailSenhaBtn.addEventListener('click', () => opcoesAlteracao.classList.toggle('escondido'));
+alterarEmailSenhaBtn.addEventListener('click', () => opcoesAlteracao.classList.toggle('escondido')
+);
 
 // Valida o código inserido pelo usuário
 validarCodigoAlteracao.addEventListener('click', () => {
@@ -76,7 +77,6 @@ alterarEmailBtn.addEventListener('click', () => {
     `;
     adicionarEventoConfirmacao(); 
 });
-
 // Evento para iniciar a alteração de senha
 alterarSenhaBtn.addEventListener('click', () => {
     solicitarNovoToken(); // Solicita um novo token
@@ -139,33 +139,49 @@ validarCodigoExclusao.addEventListener('click', () => {
 /**PREFERENCIAS**/
 const input = document.querySelector('#preferenciasInput');
 const button = document.querySelector('.addPref');
-const listaCompleta = document.querySelector('.pref'); // Corrigido para 'pref'
+const listaCompleta = document.querySelector('.pref');
 
 let minhasPreferencias = [];
 
 function adicionarPref() {
-    console.log(input.value);
-    minhasPreferencias.push(input.value);
+    const valor = input.value.trim(); // Remove espaços extras
+
+    // Verificar se o valor é nulo ou vazio
+    if (valor === '') {
+        alert('O valor não pode ser nulo ou vazio.');
+        return;
+    }
+
+    // Verificar se já atingiu o limite de 5 inserções
+    if (minhasPreferencias.length >= 5) {
+        alert('Você só pode adicionar até 5 preferências.');
+        return;
+    }
+
+    // Adicionar a nova preferência à lista
+    minhasPreferencias.push(valor);
     mostrarTarefas();
+
+    // Limpar o campo de entrada
+    input.value = '';
 }
 
 function mostrarTarefas() {
     let nova = '';
-    minhasPreferencias.forEach((tarefa,posicao) => {
-        nova = nova + `
+    minhasPreferencias.forEach((tarefa, posicao) => {
+        nova += `
         <li class="selecao" id="list">
             <img src="../img/delete.png" id="delete" onclick="deletarPref(${posicao})">
-            <p>${tarefa} </p> 
+            <p>${tarefa}</p> 
         </li>
         `;
     });
     listaCompleta.innerHTML = nova;
 }
 
-function deletarPref(posicao){
-    minhasPreferencias.splice(posicao,1)
-    console.log(posicao)
-    mostrarTarefas()
+function deletarPref(posicao) {
+    minhasPreferencias.splice(posicao, 1);
+    mostrarTarefas();
 }
 
 button.addEventListener('click', adicionarPref);
