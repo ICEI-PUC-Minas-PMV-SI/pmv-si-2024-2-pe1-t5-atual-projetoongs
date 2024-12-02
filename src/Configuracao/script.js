@@ -148,7 +148,6 @@ function adicionarPref() {
 
     // Verificar se o valor é nulo ou vazio
     if (valor === '') {
-        alert('O valor não pode ser nulo ou vazio.');
         return;
     }
 
