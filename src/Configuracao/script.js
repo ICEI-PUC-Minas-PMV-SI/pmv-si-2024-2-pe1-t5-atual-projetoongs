@@ -60,6 +60,7 @@ validarCodigoAlteracao.addEventListener('click', () => {
         document.getElementById('codigoInserido').value = '';
         novaInformacao.classList.remove('escondido'); // Exibe o formulário de alteração
         alert('Código válido! Agora, insira as informações.'); // Alerta de código correto
+        codigoAlteracao.classList.add('escondido');
     } else {
         alert('Código incorreto!'); // Alerta de código incorreto
     }
@@ -87,7 +88,6 @@ alterarSenhaBtn.addEventListener('click', () => {
     adicionarEventoConfirmacao();
 });
 
-
 // Função para adicionar o evento de confirmação para troca de e-mail ou senha
 function adicionarEventoConfirmacao() {
     setTimeout(() => {
@@ -107,8 +107,6 @@ function adicionarEventoConfirmacao() {
                         alert('As senhas não coincidem.'); 
                     }
                 }
-                codigoAlteracao.classList.add('escondido');
-                
                 // Adiciona o botão "Voltar ao Início" para reiniciar o modal
                 novaInformacao.innerHTML += `<button id="voltarInicio">Voltar ao Início</button>`;
 
@@ -120,8 +118,6 @@ function adicionarEventoConfirmacao() {
         novaInformacao.classList.add('escondido');
     }, 500); // Atraso de 500ms antes de adicionar o evento
 }
-
-
 /**********EXCLUIR********/
 
 excluirContaBtn.addEventListener('click', () => {
