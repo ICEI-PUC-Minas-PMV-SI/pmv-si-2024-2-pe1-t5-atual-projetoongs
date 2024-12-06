@@ -5,56 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil</title>
-  <link rel="stylesheet" href="./css-user-ong/user-ong.css">
   <link rel="stylesheet" href="../gerais/geral.css">
   <link rel="stylesheet" href="./css-user-ong/user-ong-dashboard.css">
   <link rel="stylesheet" href="./css-user-ong/user-ong-registros.css">
   <link rel="stylesheet" href="./css-user-ong/user-ong-projetos.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
 </head>
 
 <body>
   <script src="../gerais/geral.js"></script>
   <script src="./user-ong.js"></script>
-  <header>
-    <div id="div-logotipo">
-      <img id="logotipo" src="../img/logo-2.png" alt="">
-      <input type="text" placeholder="pesquisar por...">
-    </div>
+  <script src="../../header.js"></script>
 
-    <div id="div-navbar">
-      <nav id="navbar">
-        <a class="opcao-pagina" href="#">HOME</a>
-        <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
-        <a class="opcao-pagina" href="">EVENTOS</a>
-        <a class="opcao-pagina" href="">QUEM SOMOS</a>
-      </nav>
-
-      <div class="dropdown">
-        <button id="div-user-icon">
-          <img id="user-icon" src="../img/avatar-padrao.png" alt="">
-        </button>
-        <div class="dropdown-content">
-          <a onclick="meuPerfil()" href="">Meu Perfil</a>
-          <a href="#">Configurações</a>
-          <a onclick="sairPerfil()" href="#">Sair</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button id="div-user-icon">
-          <img id="menu-icon" src="../img/menu.png" alt="">
-        </button>
-        <div class="dropdown-content">
-          <a class="opcao-pagina" href="#">HOME</a>
-          <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
-          <a class="opcao-pagina" href="">EVENTOS</a>
-          <a class="opcao-pagina" href="">QUEM SOMOS</a>
-          <a class="opcao-pagina" onclick="meuPerfil()" href="">MEU PERFIL</a>
-          <a class="opcao-pagina" onclick="sairPerfil()" href="#">SAIR</a>
-        </div>
-      </div>
-    </div>
-
-  </header>
+  <div id="header-placeholder"></div>
 
   <main>
     <section id="dashboard">
@@ -74,7 +41,7 @@
           <p id="email-ong">ongsoscidadaniaanimal@gmail.com</p>
         </div>
         <button id="btn-editar-perfil">editar</button>
-        <a id="ver-mais-bio" style="margin-top: 10px;" href="">Gerar relatório</a>
+        <button id="gerarPdf" style="margin-top: 10px;" href="">Gerar relatório</button>
       </section>
       <section id="row-group">
         <div class="row-1-dash">
@@ -85,28 +52,28 @@
           </div>
           <div class="row-1-card-dash">
             <img style="width: 30px; margin-bottom: 14px;" src="../img/people-icon.png" alt="">
-            <p>Novos doadores | Mes</p>
-            <h3>32 doadores</h3>
+            <p>Taxa de retenção de doadores</p>
+            <h3>62%</h3>
           </div>
           <div class="row-1-card-dash">
             <img style="width: 30px; margin-bottom: 14px;" src="../img/people-icon.png" alt="">
-            <p>Novos doadores | Mes</p>
-            <h3>32 doadores</h3>
+            <p>Custo operacional</p>
+            <h3>R$ 8.500,00</h3>
           </div>
         </div>
 
         <section class="row-2-dash">
           <div class="row-2-card-dash">
             <div class="card-row-2">
-              <img style="width: 162px; height: 124px;" src="../img/dash-idade.png" alt="">
-              <p style="padding-right: 15px;">Faixa Etária</p>
+              <canvas id="g_faixaEtaria" width="200" height="100"></canvas>
+              <p>Faixa Etária</p>
             </div>
             <div class="card-row-2">
-              <img style="width: 124px; height: 133px;" src="../img/dash-localidade.png" alt="">
-              <p style="padding-left: 15px;">Localidade</p>
+              <canvas id="g_localidade" width="200" height="100"></canvas>
+              <p>Localidade</p>
             </div>
             <div class="card-row-2">
-              <img style="width: 204px; height: 129px;" src="../img/dash-renda.png" alt="">
+              <canvas id="g_rendaMensal" width="200" height="100"></canvas>
               <p>Renda Mensal</p>
             </div>
           </div>
@@ -118,8 +85,16 @@
             <h3>32 doadores</h3>
           </div>
           <div class="row-3-card-dash">
-            <p>Novos doadores | Mes</p>
-            <h3>32 doadores</h3>
+            <p>Canal de captação mais eficaz</p>
+            <h3>Instagram</h3>
+          </div>
+          <div class="row-3-card-dash">
+            <p>Número total de voluntários ativos</p>
+            <h3>12 voluntarios</h3>
+          </div>
+          <div class="row-3-card-dash">
+            <p>Avaliação média dos usuários</p>
+            <h3>4.7/5</h3>
           </div>
         </section>
 
@@ -308,6 +283,181 @@
       <button onclick="enviaInfosContato()" type="button">enviar</button>
     </form>
   </footer>
+
+
+  <script>
+
+    const ctx_faixaEtaria = document.getElementById('g_faixaEtaria').getContext('2d');
+    const g_faixaEtaria = new Chart(ctx_faixaEtaria, {
+      type: 'doughnut',
+      data: {
+        labels: ['18 a 24 anos', '25 a 45 anos', '45 a 55 anos', '+ 55 anos'],
+        datasets: [{
+          label: 'Faixa Etaria',
+          data: [10, 40, 30, 20],
+          backgroundColor: [
+            'rgba(33, 144, 251, 1)',
+            'rgba(96, 46, 158, 1)',
+            'rgba(134, 209, 230, 1)',
+            'rgba(165, 145, 239, 1)'
+          ],
+          hoverBackgroundColor: [
+            'rgba(33, 144, 251, 0.5)',
+            'rgba(96, 46, 158, 0.5)',
+            'rgba(134, 209, 230, 0.5)',
+            'rgba(165, 145, 239, 0.5)'
+          ]
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              font: {
+                size: 7
+              }
+            }
+          }
+        }
+      }
+    });
+
+    const ctx_localidade = document.getElementById('g_localidade').getContext('2d');
+    const g_localidade = new Chart(ctx_localidade, {
+      type: 'doughnut',
+      data: {
+        labels: ['Sudeste', 'Nordeste', 'Norte', 'Centro Oeste', 'Sul'],
+        datasets: [{
+          label: 'Localidade',
+          data: [37.5, 25.3, 20, 12.5, 6.2],
+          backgroundColor: [
+            'rgba(33, 144, 251, 1)',
+            'rgba(96, 46, 158, 1)',
+            'rgba(134, 209, 230, 1)',
+            'rgba(165, 145, 239, 1)',
+            'rgba(78, 171, 241, 1)'
+          ],
+          hoverBackgroundColor: [
+            'rgba(33, 144, 251, 0.5)',
+            'rgba(96, 46, 158, 0.5)',
+            'rgba(134, 209, 230, 0.5)',
+            'rgba(165, 145, 239, 0.5)',
+            'rgba(78, 171, 241, 0.5)'
+          ]
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              font: {
+                size: 7
+              }
+            }
+          }
+        }
+      }
+    });
+
+    const ctx_rendaMensal = document.getElementById('g_rendaMensal').getContext('2d');
+    const g_rendaMensale = new Chart(ctx_rendaMensal, {
+      type: 'doughnut',
+      data: {
+        labels: ['R$2000 a R$4000', 'R$4001 a R$6000', 'R$6001 a R$8000', 'R$8001 a R$10000', '+ de R$10001'],
+        datasets: [{
+          label: 'Rensa Mensal',
+          data: [20, 27, 15, 10, 6.2],
+          backgroundColor: [
+            'rgba(33, 144, 251, 1)',
+            'rgba(96, 46, 158, 1)',
+            'rgba(134, 209, 230, 1)',
+            'rgba(165, 145, 239, 1)',
+            'rgba(78, 171, 241, 1)'
+          ],
+          hoverBackgroundColor: [
+            'rgba(33, 144, 251, 0.5)',
+            'rgba(96, 46, 158, 0.5)',
+            'rgba(134, 209, 230, 0.5)',
+            'rgba(165, 145, 239, 0.5)',
+            'rgba(78, 171, 241, 0.5)'
+          ]
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              font: {
+                size: 5
+              }
+            }
+          }
+        }
+      }
+    });
+
+    document.getElementById('gerarPdf').addEventListener('click', async () => {
+      const conteudo = document.getElementById('dashboard'); // Confirme o ID correto do conteúdo
+      console.log('entrou')
+      if (!conteudo) {
+        console.error('Elemento não encontrado!');
+        return;
+      }
+
+      try {
+        console.log('entrou try')
+        // Gera um canvas da página
+        const canvas = await html2canvas(conteudo);
+        console.log('pegou conteudo')
+        // Converte o canvas para imagem
+        const imgData = canvas.toDataURL('image/png');
+        console.log('converteu p imagem')
+        // Cria uma instância do jsPDF
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF();
+        console.log(window.jspdf); // Deve retornar um objeto
+        console.log(window.jspdf.jsPDF); // Deve retornar uma função
+        console.log('criou instacia pdf')
+        // Adiciona a imagem ao PDF (ajustando tamanho ao layout da página)
+        const pageWidth = pdf.internal.pageSize.getWidth();
+        const pageHeight = pdf.internal.pageSize.getHeight();
+        const canvasWidth = canvas.width;
+        const canvasHeight = canvas.height;
+        console.log('ajustes img')
+        // Mantém a proporção da imagem dentro do PDF
+        const ratio = Math.min(pageWidth / canvasWidth, pageHeight / canvasHeight);
+        const imgWidth = canvasWidth * ratio;
+        const imgHeight = canvasHeight * ratio;
+
+        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+        console.log('add img')
+        // Salva o arquivo PDF
+        pdf.save('dashboard.pdf'); // Nome do arquivo
+        console.log('salvou arquivo')
+      } catch (error) {
+        console.error('Erro ao gerar o PDF:', error);
+      }
+    });
+
+  </script>
 </body>
 
 </html>

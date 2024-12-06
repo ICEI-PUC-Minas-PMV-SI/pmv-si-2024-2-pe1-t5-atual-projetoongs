@@ -1,0 +1,358 @@
+<header>
+  <div id="div-search">
+    <div class="div-logotipo">
+      <img id="logotipo" src="https://cdn.icon-icons.com/icons2/2070/PNG/512/panda_icon_126885.png" alt="">
+      <p class="logo-title">Projeto ONGs</p>
+    </div>
+    <input type="text" placeholder="pesquisar por...">
+  </div>
+
+  <div id="div-navbar">
+    <nav id="navbar">
+      <a class="opcao-pagina" href="http://192.168.15.89:5500/">HOME</a>
+      <a class="opcao-pagina" href="./src/Noticia/noticia.html">NOTICIAS</a>
+      <a class="opcao-pagina" href="./src/listagem-ongs/listagem-ongs.html">ONGS</a>
+      <a class="opcao-pagina logged-in hidden" href="./src/eventos2/index.html">EVENTOS</a>
+      <a class="opcao-pagina logged-in" href="./src/dicas-gestao/dicas-gestao.html">DICAS</a>
+      <a id="openLoginModalBtn" class="opcao-pagina" href="#">LOGAR</a>
+    </nav>
+
+    <div class="dropdown logged-in hidden">
+      <button id="div-user-icon">
+        <img id="user-icon" src="https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg" alt="">
+      </button>
+      <div class="dropdown-content">
+        <a onclick="meuPerfil()" href="">Meu Perfil</a>
+        <a href="#">Configurações</a>
+        <a id="logout" href="#">Sair</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button id="div-user-icon">
+
+      </button>
+      <div class="dropdown-content">
+        <a class="opcao-pagina" href="../index.html">HOME</a>
+        <a class="opcao-pagina" href="./Noticia/noticia.html">NOTICIAS</a>
+        <a class="opcao-pagina logged-in hidden" href="#">ONGS</a>
+        <a class="opcao-pagina logged-in hidden" href="#">EVENTOS</a>
+        <a class="opcao-pagina" href="#">QUEM SOMOS</a>
+        <a class="opcao-pagina logged-in hidden" onclick="meuPerfil()" href="">MEU PERFIL</a>
+        <a class="opcao-pagina logged-in hidden" href="#" id="logout">SAIR</a>
+        <a id="openLoginModalBtn" class="opcao-pagina" href="#">LOGAR</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Modal de Login -->
+<div id="loginModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="loginTitle">
+  <div class="modal-content">
+      <button id="closeLoginModal" class="close" aria-label="Fechar">&times;</button>
+      <h2 id="loginTitle" class="modal-title">Login</h2>
+      <div id="mensagem-login" class="mensagem hidden"></div>
+      <form id="loginForm" novalidate>
+          <div class="input-group">
+              <label for="email-login">Email</label>
+              <input type="email" id="email-login" name="email" required placeholder="Seu email" aria-describedby="error-email-login">
+              <span id="error-email-login" class="error-message"></span>
+          </div>
+
+          <div class="input-group">
+              <label for="password-login">Senha</label>
+              <div class="password-wrapper">
+                  <input type="password" id="password-login" name="password" required placeholder="Sua senha" aria-describedby="error-password-login">
+                  <button type="button" class="password-toggle" onclick="alternarVisibilidadeSenha('password-login')" aria-label="Mostrar ou esconder senha">👀</button>
+              </div>
+              <span id="error-password-login" class="error-message"></span>
+          </div>
+
+          <button type="submit" class="btn btn-login">Entrar</button>
+          <div class="signup-link">
+              Não tem conta? <a href="#" id="switchToSignup" aria-label="Ir para a página de cadastro">Cadastre-se</a>
+          </div>
+      </form>
+  </div>
+</div>
+
+<!-- Modal de Cadastro -->
+<div id="signupModal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="signupTitle">
+  <div class="modal-content">
+      <button id="closeSignupModal" class="close" aria-label="Fechar">&times;</button>
+      <h2 id="signupTitle" class="modal-title">Cadastro</h2>
+      <div id="mensagem-signup" class="mensagem hidden"></div>
+      <form id="signupForm" novalidate>
+          <div class="input-group">
+              <label for="username">Nome Completo</label>
+              <input type="text" id="username" name="username" required placeholder="Seu nome completo" aria-describedby="error-username">
+              <span id="error-username" class="error-message"></span>
+          </div>
+
+          <div class="input-group">
+              <label for="email-signup">Email</label>
+              <input type="email" id="email-signup" name="email" required placeholder="Seu melhor email" aria-describedby="error-email-signup">
+              <span id="error-email-signup" class="error-message"></span>
+          </div>
+
+          <div class="input-group">
+              <label for="newPassword">Senha</label>
+              <div class="password-wrapper">
+                  <input type="password" id="newPassword" name="newPassword" required placeholder="Crie uma senha forte" minlength="8" aria-describedby="error-password">
+                  <button type="button" class="password-toggle" onclick="alternarVisibilidadeSenha('newPassword')" aria-label="Mostrar ou esconder senha">👀</button>
+              </div>
+              <span id="error-password" class="error-message"></span>
+              <div class="password-strength">
+                  <div id="password-strength-bar" class="strength-bar"></div>
+                  <small id="password-strength-text"></small>
+              </div>
+          </div>
+
+          <div class="input-group">
+              <label for="userType">Tipo de Usuário</label>
+              <select id="userType" name="userType" required aria-describedby="error-userType">
+                  <option value="" disabled selected>Selecione</option>
+                  <option value="doador">Doador</option>
+                  <option value="instituicao">Instituição (ONG)</option>
+              </select>
+              <span id="error-userType" class="error-message"></span>
+          </div>
+
+          <button type="submit" class="btn btn-signup">Cadastrar</button>
+          <div class="login-link">
+              Já tem conta? <a href="#" id="switchToLogin" aria-label="Ir para a página de login">Fazer Login</a>
+          </div>
+      </form>
+  </div>
+</div>
+
+
+<style>
+ /* Estilos para o modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6); 
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease-in-out;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;
+  padding: 25px;
+  border: none;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); 
+  width: 90%;
+  max-width: 400px; 
+  border-radius: 12px; 
+  animation: slide-down 0.4s ease; 
+  position: relative;
+}
+
+/* Animação de entrada */
+@keyframes slide-down {
+  from {
+    transform: translateY(-20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.close {
+  color: #555;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #e63946;
+}
+
+/* Estilos para inputs e grupos */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #555;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+  color: #007bff;
+}
+
+/* Botões */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Links para alternar entre login e cadastro */
+.signup-link,
+.login-link {
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+}
+
+.signup-link a,
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.signup-link a:hover,
+.login-link a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Indicador de força da senha */
+.password-strength {
+  margin-top: 8px;
+}
+
+.strength-bar {
+  height: 6px;
+  width: 0;
+  background-color: red;
+  border-radius: 4px;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.password-strength-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  margin-top: 5px;
+  text-align: left;
+  color: #555;
+}
+
+/* Mensagens de sucesso/erro */
+.mensagem {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  display: none;
+}
+
+.mensagem.sucesso {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.mensagem.erro {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Estilos para mensagens de erro nos campos */
+.error-message {
+  color: #e63946;
+  font-size: 12px;
+  margin-top: 5px;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+</style>

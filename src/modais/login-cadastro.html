@@ -18,18 +18,25 @@
     </main>
 
     <!-- Modal de Login -->
-    <div id="loginModal" class="modal">
+    <div
+      id="loginModal"
+      class="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="loginTitle"
+    >
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Login</h2>
+        <span class="close" aria-label="Fechar">&times;</span>
+        <h2 id="loginTitle">Login</h2>
+        <div id="mensagem-login" class="mensagem" style="display: none"></div>
         <form>
-          <label for="email">Email</label>
-          <input type="text" id="email" name="email" required />
+          <label for="email-login">Email</label>
+          <input type="email" id="email-login" name="email" required />
+          <span id="error-email-login" class="error-message"></span>
 
-          <label for="password">Senha</label>
-          <input type="password" id="password" name="password" required />
-
-          <p><a href="#">Esqueceu sua senha?</a></p>
+          <label for="password-login">Senha</label>
+          <input type="password" id="password-login" name="password" required />
+          <span id="error-password-login" class="error-message"></span>
 
           <button type="submit" class="btn">Entrar</button>
         </form>
@@ -37,19 +44,29 @@
     </div>
 
     <!-- Modal de Cadastro -->
-    <div id="signupModal" class="modal">
+    <div
+      id="signupModal"
+      class="modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-labelledby="signupTitle"
+    >
       <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Cadastro</h2>
+        <span class="close" aria-label="Fechar">&times;</span>
+        <h2 id="signupTitle">Cadastro</h2>
+        <div id="mensagem-signup" class="mensagem" style="display: none"></div>
         <form>
           <label for="username">Nome</label>
           <input type="text" id="username" name="username" required />
+          <span id="error-username" class="error-message"></span>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <label for="email-signup">Email</label>
+          <input type="email" id="email-signup" name="email" required />
+          <span id="error-email-signup" class="error-message"></span>
 
           <label for="newPassword">Senha</label>
           <input type="password" id="newPassword" name="newPassword" required />
+          <span id="error-password" class="error-message"></span>
 
           <label for="userType">Tipo de Usuário</label>
           <select id="userType" name="userType" required>
@@ -57,6 +74,7 @@
             <option value="doador">Doador</option>
             <option value="instituicao">Instituição(ONG)</option>
           </select>
+          <span id="error-userType" class="error-message"></span>
 
           <button type="submit" class="btn">Cadastrar</button>
         </form>

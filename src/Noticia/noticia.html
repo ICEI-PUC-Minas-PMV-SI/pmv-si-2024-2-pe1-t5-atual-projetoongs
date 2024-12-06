@@ -7,53 +7,16 @@
     <title>Página de Notícia</title>
     <link rel="stylesheet" href="../gerais/geral.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../gerais/geral.css">
 </head>
 
-<body id = "noticia">
-    <header>
-        <div id="div-logotipo">
-            <img id="logotipo" src="../img/logo-2.png" alt="">
-            <input type="text" placeholder="pesquisar por...">
-        </div>
-
-        <div id="div-navbar">
-            <nav id="navbar">
-                <a class="opcao-pagina" href="../../index.html">HOME</a>
-                <a class="opcao-pagina" href="../listagem-ongs/listagem-ongs.html">ONGS</a>
-                <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
-                <a class="opcao-pagina" href="../eventos2/index.html">EVENTOS</a>
-                <a class="opcao-pagina" href="">QUEM SOMOS</a>
-            </nav>
-
-            <div class="dropdown">
-                <button id="div-user-icon">
-                    <img id="user-icon" src="../img/avatar-padrao.png" alt="">
-                </button>
-                <div class="dropdown-content">
-                    <a href="../src/user-ong/user-ong.html">Meu Perfil</a>
-                    <!-- onclick="meuPerfil()" -->
-                    <a href="#">Configurações</a>
-                    <a onclick="sairPerfil()" href="#">Sair</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button id="div-user-icon">
-                    <img id="menu-icon" src="../img/menu.png" alt="">
-                </button>
-                <div class="dropdown-content">
-                    <a class="opcao-pagina" href="../../index.html">HOME</a>
-                    <a class="opcao-pagina" href="../src/Noticia/noticia.html">NOTICIAS</a>
-                    <a class="opcao-pagina" href="../src/eventos2/index.html">EVENTOS</a>
-                    <a class="opcao-pagina" href="">QUEM SOMOS</a>
-                    <a class="opcao-pagina" href="../src/user-ong/user-ong.html">MEU PERFIL</a>
-                    <!-- onclick="meuPerfil()" -->
-                    <a class="opcao-pagina" onclick="sairPerfil()" href="#">SAIR</a>
-                </div>
-            </div>
-        </div>
-
-    </header>
-
+<body>
+    <script src="../../header.js"></script>
+    <div id="header-placeholder"></div>
+    <main>
+        <div>
+            <span>Atualizado em <span id="diaatualiza"></span> de <span id="mesatualiza"></span> de <span id="anoatualiza"></span></span>
+ 
     <!--PRIMEIRA PARTE-->
     <div>
         <div id="containerP">   

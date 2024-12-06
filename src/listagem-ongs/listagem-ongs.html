@@ -1,44 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página de Listagem</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="listagem-ongs.css" />
-    <link rel="stylesheet" href="../gerais/geral.css" />
-  </head>
-  <body>
-    <header>
-      <div id="div-logotipo">
-        <img
-          id="logotipo"
-          src="https://cdn.icon-icons.com/icons2/2070/PNG/512/toucan_icon_125604.png"
-          alt=""
-        />
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Listagem</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="listagem-ongs.css" />
+  <link rel="stylesheet" href="../gerais/geral.css" />
+</head>
 
-      <div id="div-navbar">
-        <nav id="navbar">
-          <a class="opcao-pagina" href="">HOME</a>
-          <a class="opcao-pagina" href="">NOTICIAS</a>
-          <a class="opcao-pagina" href="">EVENTOS</a>
-          <a class="opcao-pagina" href="">QUEM SOMOS</a>
-        </nav>
-
-        <div id="div-user-icon">
-          <img
-            id="user-icon"
-            src="https://icons.veryicon.com/png/o/miscellaneous/bitisland-world/person-18.png"
-            alt=""
-          />
-        </div>
-      </div>
-    </header>
-
+<body>
+  <script src="../../header.js"></script>
+  <div id="header-placeholder"></div>
     <div class="container">
       <aside class="sidebar">
         <div class="menu-icon">&#9776; Filtros Rápidos</div>
@@ -85,30 +58,25 @@
             <button class="btn">Saber Mais</button>
           </div>
         </div>
-      </main>
-    </div>
-
+      </div>
+    </main>
+  </div>
     <footer>
       <section id="footer-sec">
         <div id="footer-menu">
           <h3>Projeto ONGs</h3>
-          <a href="">Home</a>
-          <a href="">Noticias</a>
+          <a href="#">Home</a>
+          <a href="./Noticia/noticia.html">Noticias</a>
           <a href="">Eventos</a>
           <a href="">Voluntariados - Informações</a>
           <a href="">FAQ</a>
           <a href="">Trabalhe Conosco</a>
           <a href="">Termos do Site e Politica de privacidade</a>
           <section id="footer-redes">
-            <img src="../img/ig-icon.png" alt="ig" />
-            <img src="../img/face-icon.png" alt="fc" />
-            <img src="../img/x-icon.png" alt="tt" />
-            <img
-              style="background-color: white; border-radius: 100%"
-              src="../img/lkd-icon.png"
-              alt="lkin"
-            />
-            <img src="../img/github-icon.png" alt="github" />
+            <img src="../img/insta-b.png" alt="ig" />
+            <img src="../img/face-b.png" alt="fc" />
+            <img src="../img/lkn-b.png" alt="lkin" />
+            <img src="../img/wpp-b.png" alt="whatsapp" />
           </section>
         </div>
         <div id="footer-infos">
@@ -122,17 +90,18 @@
           <a href="">Causa Animal</a>
         </div>
       </section>
-      <div id="footer-contato">
-        <input placeholder="Nome..." type="text" />
-        <input placeholder="Sobrenome..." type="text" />
-        <input placeholder="Seu e-mail..." type="email" />
+      <form id="footer-contato">
+        <input id="nomeContato" required placeholder="*Nome..." type="text" />
+        <input id="sobrenomeContato" placeholder="*Sobrenome..." type="text" />
+        <input id="emailContato" placeholder="*Seu e-mail..." type="email" />
         <textarea
-          placeholder="Escreva sua mensagem..."
+          id="msgContato"
+          placeholder="*Escreva sua mensagem..."
           name=""
           id=""
         ></textarea>
-        <button>enviar</button>
-      </div>
+        <button onclick="enviaInfosContato()" type="button">enviar</button>
+      </form>
     </footer>
   </body>
   <script src="listagem-ongs.js"></script>

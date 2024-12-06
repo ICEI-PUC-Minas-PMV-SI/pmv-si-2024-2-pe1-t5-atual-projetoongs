@@ -1,19 +1,7 @@
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizadas no desenvolvimento do trabalho.
+**[1]** - _CAZZOLATO, N. K. (2009). [**As Dificuldades de Gestão das Organizações Não-Governamentais**](https://core.ac.uk/download/pdf/229080571.pdf). Revista da Faculdade de Administração e Economia - ReFAE. São Paulo. v1, n.1, p.66-81 DOI: 10.15603/2176-9583/refae.v1n1p66-81
 
-> **Links Úteis**:
-> - [Formato ABNT](https://www.normastecnicas.com/referencias/)
+**[2]** - _NICBR. **Números do Terceiro Setor em 2024**.  Disponível em: [**www.nic.br/numeros-do-terceiro-setor-em-2024/**](https://www.nic.br/noticia/na-midia/numeros-do-terceiro-setor-em-2024/#:~:text=O%20Brasil%20contava%20com%20815.676,segundo%20o%20Mapa%20das%20OSCs). Acesso em: 03/OUT/2024
 
-Exemplos de referências bibliográficas:
-
-**[1]** - _ELMASRI, Ramez; NAVATHE, Sham. **Sistemas de banco de dados**. 7. ed. São Paulo: Pearson, c2019. E-book. ISBN 9788543025001._
-
-**[2]** - _COPPIN, Ben. **Inteligência artificial**. Rio de Janeiro, RJ: LTC, c2010. E-book. ISBN 978-85-216-2936-8._
-
-**[3]** - _CORMEN, Thomas H. et al. **Algoritmos: teoria e prática**. Rio de Janeiro, RJ: Elsevier, Campus, c2012. xvi, 926 p. ISBN 9788535236996._
-
-**[4]** - _SUTHERLAND, Jeffrey Victor. **Scrum: a arte de fazer o dobro do trabalho na metade do tempo**. 2. ed. rev. São Paulo, SP: Leya, 2016. 236, [4] p. ISBN 9788544104514._
-
-**[5]** - _RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial**. Rio de Janeiro: Elsevier, c2013. xxi, 988 p. ISBN 9788535237016._
-
+**[3]** - _ATADOS. Disponível em: [**https://www.atados.com.br/**](https://www.atados.com.br/). Acesso em: 07/OUT/2024
