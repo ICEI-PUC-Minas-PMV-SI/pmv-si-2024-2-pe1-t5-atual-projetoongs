@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
       document.getElementById('header-placeholder').innerHTML = data;
-
       // Inicializar eventos e atualizações da header
       initializeHeader();
     })
