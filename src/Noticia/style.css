@@ -10,29 +10,54 @@ body {
 }
 
 span {
-    height: 10vw;
-    border: medium solid;
+    display: flex;
+    height: 2vw;
 }
 
 /* Container Principal */
-.containerP {
+#containerP {
     display: flex;
+    width: 100%;
     gap: 30px;
+    margin-left: 2%;
+    justify-content: left;
     padding: 30px 2px;
-    background-color: aqua;
 }
 
-.noticiaP-right {
+#noticiaP-right {
     border-radius: 15px;
-    width: 60%;
+    flex: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
     display: flex;
     flex-direction: column;
 }
 
-.box1,
-.box2 {
+#tituloP {
+    margin-top: 10%;
+    margin-left: 5%;
+    width: 95%;
+    font-size: 32px;
+    font-weight: bold;/
+}
+
+#textoP {
+    margin-left: 5%;
+    margin-top: 2%;
+    width: 90%;
+    font-weight: normal;
+    font-size: 1rem;
+    font-size: 20px;
+
+}
+
+#noticiaP-left {
+    margin-right: 5%;
+    border-radius: 15px;
+    flex: 1;
+
+}
+
+.box {
     height: 200px;
     width: 100%;
     margin-right: 5%;
@@ -44,135 +69,169 @@ span {
     background-position: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    bottom: 0;
+    position: relative;
 }
 
-.box1 {
-    background-image: url(./img/coracao.jpg);
+.subTitulo {
+    position: absolute;
+    /* Para posicionar dentro do elemento pai */
+    bottom: 0;
+    left: 0;
+    width: 50vh;
+    color: #000000;
+    padding: 10px;
+    /* Opcional: para espaçamento extra */
 }
 
-.box2 {
-    margin-top: 20px;
-    background-image: url(./img/sangue.jpg);
-}
-
-.titulop {
-    margin-top: 10%;
-    margin-left: 5%;
-    width: 95%;
-}
-
-.textop {
-    margin-top: 2%;
-    margin-left: 5%;
-    width: 90%;
-    font-weight: normal;
-    font-size: 1rem;
-}
 
 /*** SEGUNDA PARTE ***/
 /* Esqueleto */
 /*Left*/
+
 #container2 {
-    height: 1000px;
+    min-height: 1050px;
     width: 100%;
     display: flex;
-    border: medium solid;
+    gap: 2%;
 }
 
-#leftnoticias {
-    border: medium solid;
+
+#leftNoticias {
     display: grid;
-    width: 66%;
+    align-items: left;
+    gap: 2%;
+    max-width: 60%;
+    margin: 20px auto;
 }
 
-#noticias0 {
+.noticias {
     display: flex;
+    height: 100%;
+    gap: 2%;
+}
+
+.outrosBox {
+    height: 100%;
+    width: 50%;
+    border-radius: 20px;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(1);
 }
 
 #texto {
-    display: inline-block;
-    margin-top: 5vh;
+    margin-top: 2%;
+    height: 80%;
+    width: 60%;
+}
+
+#tituloOutros {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+
+h3 {
+    margin-top: 5%;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+#outrasN {
+    margin-top: 2%;
+}
+
+
+h2 {
+    display: flex;
+    justify-content: center;
 }
 
 /*Right*/
-#topnot {
-    border: medium solid;
+#topAssuntos {
+    margin-top: 2%;
     display: grid;
     width: 33%;
+    height: 50%;
+    border-left: none;
+    /* Remove qualquer borda sólida */
+    background-image: linear-gradient(to right, #333 0%, transparent 100%);
+    background-size: 1px 100%;
+    /* Define a largura da borda */
+    background-repeat: no-repeat;
+    /* Evita que o gradiente se repita */
+    transition: background-size 0.3s ease;
+    /* Suaviza o efeito */
 }
 
-#titulotop {
-    margin-top: 2vw;
-    margin-left: 5vw;
-    height: 1vw;
-}
-
-#top1 {
-    margin-top: 2vw;
-    margin-left: 2vw;
-    height: 10vw;
-    width: 25vw;
-    border: medium solid;
-}
-
-#outrostop {
-    margin-top: 2vw;
-    margin-left: 2vw;
-    height: 10vw;
-    width: 25vw;
-    border: medium solid;
-}
-
-P {
-    margin-top: 1vw;
-}
-
-/********** Fim do Esqueleto **********/
-
-#outrosbox {
-    background-image: url(./img/menino.jpg);
-    height: 15vw;
-    width: 30vw;
-    border-radius: 20px;
-    margin-right: 8%;
-    margin-left: 3%;
-    background-position: center;
-}
-
-#outrosbox2 {
-    margin-top: 2vh;
-    background-image: url(./img/menino.jpg);
-    height: 15vw;
-    width: 30vw;
-    border-radius: 20px;
-    margin-right: 8%;
-    margin-left: 3%;
-    background-position: center;
-}
-
-h3 {
+#top {
     margin-left: 2%;
 }
 
+.top1 {
 
+    font-size: 1.1rem;
+    margin-top: 10%;
+    font-weight: bold;
+    color: black;
+}
+
+p {
+    font-size: 1rem;
+    margin-top: 2%;
+    font-weight: normal;
+}
+
+/*Imagens*/
+
+#box1 {
+    background-image: url(../imgNoticia/coracao.jpg);
+}
+
+#box2 {
+    margin-top: 20px;
+    background-image: url(../imgNoticia/sangue.jpg);
+}
+
+
+#imagem1 {
+    background-image: url(../imgNoticia/Mulher.jpg)
+        /*./img/Mulher.jpg);*/
+}
+
+#imagem2 {
+    background-image: url(../imgNoticia/Rio.jpeg);
+}
+
+#imagem3 {
+    background-image: url(../imgNoticia/menino.jpg);
+}
+
+#imagem4 {
+    background-image: url(../imgNoticia/ONGs.jpeg);
+}
+
+/*Fim*/
 
 
 /* Media Queries para melhorar a responsividade */
 @media (max-width: 768px) {
-    .containerP {
+    #containerP {
         flex-direction: column;
     }
 
-    .noticiaP-right {
+    #noticiaP-right {
         width: 100%;
     }
 
-    .box1,
-    .box2 {
+    .box {
         width: 100%;
     }
 
-    #outrosbox {
+    .outrosbox {
         width: 100%;
         height: 200px;
     }
@@ -182,8 +241,8 @@ h3 {
     #leftnoticias {
         width: 100%;
     }
-
-    #topnot {
+  
+    #topAssuntos {
         width: 100%;
     }
 }

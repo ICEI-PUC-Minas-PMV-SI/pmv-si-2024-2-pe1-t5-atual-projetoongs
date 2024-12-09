@@ -5,9 +5,9 @@ Implementação do sistema descritas por meio dos requisitos funcionais e/ou nã
 Para cada requisito funcional, pode ser entregue um artefato desse tipo.
 
 O professor Rommel Carneiro apresenta alguns exemplos prontos para serem utilizados como referência:
-- Login do sistema: [https://repl.it/@rommelpuc/LoginApp](https://repl.it/@rommelpuc/LoginApp) 
-- Cadastro de Contatos: [https://repl.it/@rommelpuc/Cadastro-de-Contatos](https://repl.it/@rommelpuc/Cadastro-de-Contatos)
 
+- Login do sistema: [https://repl.it/@rommelpuc/LoginApp](https://repl.it/@rommelpuc/LoginApp)
+- Cadastro de Contatos: [https://repl.it/@rommelpuc/Cadastro-de-Contatos](https://repl.it/@rommelpuc/Cadastro-de-Contatos)
 
 > **Links Úteis**:
 >
@@ -25,10 +25,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 ### Requisitos Funcionais
 
-|ID    | Descrição do Requisito | Responsável | Artefato Criado |
-|------|------------------------|------------|-----------------|
-|RF-001| A aplicação deve permitir que o usuário gerencie suas tarefas | João | index.html |
-|RF-002| A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês | Ana Paula | cadastro-noticia.html |
+| ID     | Descrição do Requisito                                                           | Responsável | Artefato Criado       |
+| ------ | -------------------------------------------------------------------------------- | ----------- | --------------------- |
+| RF-001 | A aplicação deve permitir que o usuário gerencie suas tarefas                    | João        | index.html            |
+| RF-002 | A aplicação deve permitir a emissão de um relatório de tarefas realizadas no mês | Ana Paula   | cadastro-noticia.html |
 
 | ID     | Descrição do Requisito                                                                                                  | Responsável | Artefato Criado     |
 | ------ | ----------------------------------------------------------------------------------------------------------------------- | ----------- | ------------------- |
@@ -46,12 +46,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 ## Descrição das estruturas:
 
 ## Notícia
-|  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
-|:--------------:|-------------------|-------------------------------------------|------------------------------------------------|
-| Id             | Numero (Inteiro)  | Identificador único da notícia            | 1                                              |
-| Título         | Texto             | Título da notícia                         | Sistemas de Informação PUC Minas é o melhor                                   |
-| Conteúdo       | Texto             | Conteúdo da notícia                       | Sistemas de Informação da PUC Minas é eleito o melhor curso do Brasil                            |
-| Id do usuário  | Numero (Inteiro)  | Identificador do usuário autor da notícia | 1                                              |
 
 ### Cadastro de Usuários - Doador
 |  **Nome**      | **Tipo**          | **Descrição**                             | **Exemplo**                                    |
@@ -94,4 +88,3 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 |                |                   |                                           |                                                |
 |                |                   |                                           |                                                |
 |                |                   |                                           |                                                |
-
