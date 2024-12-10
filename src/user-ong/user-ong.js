@@ -50,7 +50,6 @@ btnCriar.addEventListener('click', () => {
   const description = newsDescription.value.trim();
 
   if (title && description) {
-    // Criar o novo card
     const newCard = document.createElement('div');
     newCard.classList.add('card');
 
@@ -72,10 +71,8 @@ btnCriar.addEventListener('click', () => {
     cardTitle.classList.add('reg-card-h3');
     cardDescription.classList.add('reg-card-paragrafo');
 
-    // Adicionar o card ao container
     regGroupCards.appendChild(newCard);
 
-    // Fechar o modal e limpar os campos
     modalRegistro.style.display = 'none';
     overlay.style.display = 'none';
     clearModalInputs();
@@ -103,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   btnCriar.addEventListener('click', () => {
     const photo = newsPhoto.files[0];
-    const lupa = "../img/lupa.png"
+    const lupa = "../img/caneta.png"
     const title = newsTitle.value.trim();
     const description = newsDescription.value.trim();
   
@@ -129,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
       cardDescription.textContent = description;
 
       const cardVerMais = document.createElement('a');
-      cardVerMais.textContent = "ver mais";
+      cardVerMais.textContent = "Inscrições encerradas!";
 
       const cardLupa = document.createElement('img');
       cardLupa.src = lupa;
@@ -214,5 +211,3 @@ function editarPerfil() {
 
 
 /* ---------------- modal inscrição --------------- */
-
-m-proj-insc
