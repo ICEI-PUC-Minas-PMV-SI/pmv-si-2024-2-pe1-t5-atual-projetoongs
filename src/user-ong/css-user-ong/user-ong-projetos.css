@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: 30px;
   margin-top: 20px;
+  align-items: center;
 }
 
 #pj-info{
@@ -220,8 +221,8 @@ small{
 
 .m-p-insc-main {
   background-color: #ffffff;
-  margin: 10% auto;
-  width: 50%;
+  margin: 5% auto;
+  width: 80%;
   border-radius: 10px;
   display: flex;
   gap: 30px;
