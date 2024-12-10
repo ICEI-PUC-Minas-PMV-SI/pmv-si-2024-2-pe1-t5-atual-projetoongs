@@ -24,7 +24,7 @@ justify-content: center;
   cursor: pointer;
 }
 
-#pj-main{
+.pj-main{
   display: flex;
   gap: 40px;
   justify-content: center;
@@ -89,7 +89,7 @@ justify-content: center;
 .pj-ver-mais{
   font-size: 12px;
   text-decoration: underline;
-  color: #4EAAED;
+  color: lightcoral;
 }
 
 /*----------- modal projetos ------------*/
@@ -205,3 +205,107 @@ small{
   margin-top: 10px;
 }
 
+/* modal inscrição */
+
+.modalInscricao {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.m-p-insc-main {
+  background-color: #ffffff;
+  margin: 10% auto;
+  width: 50%;
+  border-radius: 10px;
+  display: flex;
+  gap: 30px;
+  flex-direction: row;
+  position: relative;
+  padding: 20px;
+}
+
+.m-insc-left{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-p-insc-infos{
+  width: 50%;
+  padding: 20px 20px 0px 20px;
+}
+
+.m-insc-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+}
+small{
+  color: #aaa;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.m-fechar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+}
+
+.m-fechar:hover,
+.m-fechar:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.m-proj-label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.m-proj-input {
+  margin-bottom: 15px;
+  padding-left: 10px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #eaeeef;
+}
+
+.m-proj-desc-g{
+  height: 100px;
+  padding: 10px;
+  background-color: #eaeeef;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.m-proj-btn{
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: #4EAAED;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.m-insc-horario{
+  font-size: 12px;
+}
