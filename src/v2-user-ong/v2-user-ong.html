@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil</title>
   <link rel="stylesheet" href="../gerais/geral.css">
+  <link rel="stylesheet" href="../user-ong/css-user-ong/user-ong-projetos.css">
   <link rel="stylesheet" href="./v2-css-user-ong/v2-user-ong-introducao.css">
   <link rel="stylesheet" href="./v2-css-user-ong/v2-user-ong-dashboard.css">
   <link rel="stylesheet" href="./v2-css-user-ong/v2-user-ong-registros.css">
@@ -16,58 +17,22 @@
 <body>
   <script src="../gerais/geral.js"></script>
   <script src="./v2-user-ong.js"></script>
-  <header>
-    <div id="div-logotipo">
-      <img id="logotipo" src="../img/logo-2.png" alt="">
-      <input type="text" placeholder="pesquisar por...">
-    </div>
+  <script src="../../header.js"></script>
 
-    <div id="div-navbar">
-      <nav id="navbar">
-        <a class="opcao-pagina" href="../../index.html">HOME</a>
-        <a class="opcao-pagina" href="../listagem-ongs/listagem-ongs.html">ONGS</a>
-        <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
-        <a class="opcao-pagina" href="../eventos2/index.html">EVENTOS</a>
-        <a class="opcao-pagina" href="">QUEM SOMOS</a>
-      </nav>
-
-      <div class="dropdown">
-        <button id="div-user-icon">
-          <img id="user-icon" src="../img/avatar-padrao.png" alt="">
-        </button>
-        <div class="dropdown-content">
-          <a onclick="meuPerfil()" href="">Meu Perfil</a>
-          <a href="#">Configurações</a>
-          <a onclick="sairPerfil()" href="#">Sair</a>
-        </div>
-      </div>
-      <div class="dropdown">
-        <button id="div-user-icon">
-          <img id="menu-icon" src="../img/menu.png" alt="">
-        </button>
-        <div class="dropdown-content">
-          <a class="opcao-pagina" href="#">HOME</a>
-          <a class="opcao-pagina" href="../Noticia/noticia.html">NOTICIAS</a>
-          <a class="opcao-pagina" href="">EVENTOS</a>
-          <a class="opcao-pagina" href="">QUEM SOMOS</a>
-          <a class="opcao-pagina" onclick="meuPerfil()" href="">MEU PERFIL</a>
-          <a class="opcao-pagina" onclick="sairPerfil()" href="#">SAIR</a>
-        </div>
-      </div>
-    </div>
-
-  </header>
+  <div id="header-placeholder"></div>
 
   <main>
     <section class="introducao">
       <div class="intro-infos">
         <h1 class="intro-titulo">Cidadania Animal</h1>
-        <p class="intro-subtitulo">lorem ipsum lorem ipsum</p>
+        <p class="intro-subtitulo">ong sos cidadania animal</p>
         <div class="intro-div-tags">
           <p class="intro-tag-um">Animais</p>
           <p class="intro-tag-dois">Grande Porte</p>
         </div>
-        <p class="intro-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+        <p class="intro-bio">
+          A ONG SOS CIDADANIA ANIMAL é uma organização não-governamental, sem fins lucrativos, fundada em janeiro de 2009 para oferecer auxílio aos animais necessitados que estão abandonados à sua própria sorte. Nossa missão sempre foi a de mudar a realidade destes que muitas vezes estão completamente indefesos, vítimas da crueldade e do abuso, enquanto tentam sobreviver sem proteção.
+          Nós lutamos para defender seus interesses, realizando procedimentos veterinários à animais de tutores, protetores, e/ou de abrigos, incluindo resgates de animais, recuperação, adoções, castrações, vacinações, campanhas de doações de rações, medicamentos e assistência veterinária.</p>
         <div class="intro-div-btn">
           <button class="intro-btn-ver"><a href="#projetos">Ver projetos</a></button>
           <button class="intro-btn-contato"><a href="#contato">Contato</a></button>
@@ -80,63 +45,59 @@
       <div id="pj-info">
         <h2 id="pj-titulo">Projetos</h2>
       </div>
-      <div id="pj-main">
+      <div id="pj-main" class="pj-main">
         <div class="pj-card">
           <img class="pj-img" src="../img/ong-4.png" alt="">
           <div class="pj-card-info">
-            <h3 class="pj-card-h3">Lorem Ipsum</h3>
-            <p class="pj-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem </p>
-            <a class="pj-ver-mais" href="">ver mais</a>
-          </div>
-          <div class="pj-card-lupa">
-            <img class="pj-lupa" src="../img/lupa.png" alt="lupa">
+            <h3 class="pj-card-h3">Adote com Amor</h3>
+            <p class="pj-card-paragrafo">Este projeto conecta animais resgatados a famílias amorosas, promovendo adoções responsáveis e seguras. </p>
+            <p class="pj-ver-mais" href="">Inscrições abertas até 15/12/24</p>
           </div>
         </div>
 
         <div class="pj-card">
           <img class="pj-img" src="../img/ong-5.png" alt="">
           <div class="pj-card-info">
-            <h3 class="pj-card-h3">Lorem Ipsum</h3>
-            <p class="pj-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem lorem ipsum orem</p>
-            <a class="pj-ver-mais" href="">ver mais</a>
-          </div>
-          <div class="pj-card-lupa">
-            <img class="pj-lupa" src="../img/lupa.png" alt="lupa">
+            <h3 class="pj-card-h3">Cuidado em Ação</h3>
+            <p class="pj-card-paragrafo">Focado no resgate e tratamento de animais em situação de rua ou maus-tratos para reintegrá-los a um ambiente seguro.</p>
+            <a class="pj-ver-mais" href="">Inscrições abertas até 15/12/24</a>
           </div>
         </div>
 
         <div class="pj-card">
           <img class="pj-img" src="../img/ong-1.png" alt="">
           <div class="pj-card-info">
-            <h3 class="pj-card-h3">Lorem Ipsum</h3>
-            <p class="pj-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem lorem ipsum orem sumip lorem lorem ipsum</p>
-            <a class="pj-ver-mais" href="">ver mais</a>
-          </div>
-          <div class="pj-card-lupa">
-            <img class="pj-lupa" src="../img/lupa.png" alt="lupa">
+            <h3 class="pj-card-h3">Educação e Consciencia</h3>
+            <p class="pj-card-paragrafo">Promovemos campanhas educativas sobre direitos dos animais, guarda responsável e combate ao abandono.</p>
+            <a class="pj-ver-mais" href="">Inscrições encerradas!</a>
           </div>
         </div>
 
         <div class="pj-card">
           <img class="pj-img" src="../img/ong-2.png" alt="">
           <div class="pj-card-info">
-            <h3 class="pj-card-h3">Lorem Ipsum</h3>
-            <p class="pj-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
-            <a class="pj-ver-mais" href="">ver mais</a>
-          </div>
-          <div class="pj-card-lupa">
-            <img class="pj-lupa" src="../img/lupa.png" alt="lupa">
+            <h3 class="pj-card-h3">Rede de Apoio Voluntário</h3>
+            <p class="pj-card-paragrafo">Este projeto conecta pessoas que desejam ajudar animais a oportunidades de voluntariado para transformar vidas.</p>
+            <a class="pj-ver-mais" href="">Inscrições abertas até 03/01/25</a>
           </div>
         </div>
-
       </div>
 
-      <div id="modalProjetos" class="modalProjetos">
+      <div class="btnSecao">
+        <button onclick="abreInscr()" class="btnInsc">Se Inscrever</button>
+        <p>ou</p>
+        <button class="btnInsc"><a href="../eventos2/index.html">Ver Eventos</a></button>
+      </div>
+
+      <div class="pj-main" id="novoCardProj"></div>
+
+      <div id="overlay-proj"></div>
+      <div id="modalProjetos" class="modalProjetos"> <!-- add novo projeto -->
         <div class="m-proj-main">
           <div class="m-proj-img">
             <img src="../img/img-padrao.png" alt="">
-            <small>selecione sua foto</small>
-            <input type="file">
+            <small>selecione a foto</small>
+            <input accept="image/*" id="cardPhotoProj" type="file">
           </div>
 
           <div class="m-proj-left">
@@ -147,12 +108,72 @@
 
             <form class="m-proj-form">
               <label class="m-proj-label" for="m-proj-titulo">Titulo</label>
-              <input class="m-proj-input" placeholder="Digite..." type="text" id="m-proj-titulo" name="m-proj-titulo" required />
+              <input id="news-title-proj" class="m-proj-input" placeholder="Digite..." type="text" id="m-proj-titulo" name="m-proj-titulo" required />
 
               <label class="m-proj-label" for="m-proj-desc-g">Descrição</label>
-              <textarea placeholder="Digite..." name="m-proj-desc-g" class="m-proj-desc-g"></textarea>
+              <textarea id="news-description-proj" placeholder="Digite..." name="m-proj-desc-g" class="m-proj-desc-g"></textarea>
               <small>maximo 400 caracteres</small>
-              <button type="button" class="m-proj-btn">Criar</button>
+              <button id="create-proj" type="button" class="m-proj-btn">Criar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <!--modal de inscrição-->
+      <div id="modalInscricao" class="modalInscricao"> <!-- add novo projeto -->
+        <div class="m-p-insc-main">
+          <div class="m-p-insc-infos">
+            <h3>Saiba mais sobre os projetos!</h3>
+            <br>
+            <p>A Cidadania Animal desenvolve iniciativas que fazem a diferença na vida de milhares de animais e na construção de uma sociedade mais consciente e solidária. Nossos projetos abrangem adoção responsável, resgate e cuidados, educação sobre direitos dos animais e oportunidades de voluntariado. Cada ação é pensada para criar impacto positivo e oferecer a você a chance de contribuir de forma significativa. Escolha o projeto que mais combina com você e seja parte dessa rede de amor e cidadania. Juntos, podemos fazer mais pelos nossos amigos de quatro patas!</p>
+            <br>
+            <div style="display: flex;">
+              <img style="width: 30px; height: 30px; margin-right: 10px; cursor: pointer;" src="../img/insta-b.png" alt="">
+              <img style="width: 30px; height: 30px; margin-right: 10px; cursor: pointer;" src="../img/face-b.png" alt="">
+              <img style="width: 30px; height: 30px; cursor: pointer;" src="../img/wpp-b.png" alt="">
+            </div>
+            <br>
+            <a style="color: #4EAAED; text-decoration: underline;" href="https://ongsoscidadaniaanimal.org/">Site Cidadania Animal</a>
+          </div>
+
+          <div class="m-insc-left">
+            <div class="m-proj-infos">
+              <span class="m-fechar">&times;</span>
+              <h3>Se torne Voluntário!</h3>
+            </div>
+
+            <form class="m-insc-form">
+              <label class="m-proj-label" for="m-proj-titulo">Nome completo</label>
+              <input class="m-proj-input" placeholder="Digite..." type="text" name="m-proj-titulo" required />
+
+              <label class="m-proj-label" for="m-proj-titulo">E-mail</label>
+              <input class="m-proj-input" placeholder="Digite..." type="text" name="m-proj-titulo" required />
+
+              <label class="m-proj-label" for="m-proj-titulo">Projeto</label>
+              <select class="m-proj-input" placeholder="Digite..." required>
+                <option value="v1" selected disabled>Escolha uma opção</option>
+                <option value="v1">Adote com Amor</option>
+                <option value="v2">Cuidado em Ação</option>
+                <option value="v3">Educação e Consciencia</option>
+                <option value="v3">Rede de Apoio Voluntário</option>
+              </select>
+
+              <p class="m-proj-label" for="m-proj-titulo">Escolha um horário:</p>
+              <div style="margin-bottom: 10px;">
+                <input type="checkbox" name="m-proj-titulo" />
+                <label class="m-insc-horario">Terças e Quintas as 15:30</label>
+              </div>
+              <div style="margin-bottom: 10px;">
+                <input type="checkbox" name="m-proj-titulo" />
+                <label class="m-insc-horario">Quartas e Sextas as 15:30</label>
+              </div>
+              <div style="margin-bottom: 20px;">
+                <input type="checkbox" name="m-proj-titulo" />
+                <label class="m-insc-horario">Sabados das 10hrs as 16hrs</label>
+              </div>
+
+              <button id="create-insc" type="submit" class="m-proj-btn">Enviar</button>
             </form>
           </div>
         </div>
@@ -165,28 +186,33 @@
       <div id="reg-group-cards">
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-1.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">Antes e depois dos nossos AUmigos!</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-2.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">12° Feira Adote com Amor</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-3.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">5º Cuidado em Ação</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-4.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">Educação e Consciencia: Abandono</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-5.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">4º Cuidado em Ação</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
       </div>
     </section>
@@ -194,7 +220,15 @@
     <section id="dashboard">
       <section id="perfil-dash">
         <h1 id="nome-ong">Métricas da ONG</h1>
-        <p id="bio-ong">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+        <p id="bio-ong">A Projeto ONGs preza pela transparência e pelo impacto das ONGs de nossa plataforma, por isso compartilhamos as métricas que refletem nosso compromisso com a sociedade. Aqui, você pode acompanhar os custos detalhados de entrada e saída, mostrando como cada doação é aplicada. Também destacamos o número de doadores e voluntários engajados nas iniciativas, além da algumas métricas personalizadas para cada ONG. Cada número conta uma história de transformação que você ajuda a construir!</p>
+        <br>
+        <br>
+        <section id="relatorios">
+          <a href="">Relatório de receitas e gastos 2º Semestre 2024</a>
+          <a href="">Relatório de receitas e gastos 1º Semestre 2024</a>
+          <a href="">Relatório de receitas e gastos 2º Semestre 2023</a>
+          <a href="">Relatório de receitas e gastos 1º Semestre 2023</a>
+        </section>
       </section>
 
       <section id="row-group">
@@ -205,15 +239,17 @@
             <h3>R$ 10.000,00</h3>
           </div>
           <div class="row-1-card-dash">
-            <img style="width: 30px; margin-bottom: 14px;" src="../img/people-icon.png" alt="">
-            <p>Novos doadores | Mes</p>
-            <h3>32 doadores</h3>
+            <img style="width: 30px; margin-bottom: 14px;" src="../img/hand-money.png" alt="">
+            <p>Aumento no custo | ano</p>
+            <h3>32%</h3>
           </div>
           <div class="row-1-card-dash">
-            <img style="width: 30px; margin-bottom: 14px;" src="../img/people-icon.png" alt="">
-            <p>Novos doadores | Mes</p>
-            <h3>32 doadores</h3>
+            <img style="width: 30px; margin-bottom: 14px;" src="../img/hand-money.png"" alt="">
+            <p>Custo operacional</p>
+            <div style=" display: flex; justify-content: space-between;">
+            <h3 id="value-display" contenteditable="false">R$ 8.500,00</h3>
           </div>
+        </div>
         </div>
 
         <section class="row-3-dash">
@@ -222,26 +258,26 @@
             <h3>32 doadores</h3>
           </div>
           <div class="row-3-card-dash">
-            <p>Novos doadores | Mes</p>
-            <h3>32 doadores</h3>
+            <p>Número total de voluntários ativos</p>
+            <h3>12 voluntarios</h3>
           </div>
         </section>
 
         <div class="row-1-dash">
           <div class="row-1-card-dash">
-            <img style="width: 30px; margin-bottom: 14px;" src="../img/hand-money.png" alt="">
-            <p>Total arrecadado | Mes</p>
-            <h3>R$ 10.000,00</h3>
+            <img style="width: 30px; margin-bottom: 14px;" src="../img/people-icon.png" alt="">
+            <p>Total de animais adotados | Mes</p>
+            <h3>25</h3>
           </div>
           <div class="row-1-card-dash">
             <img style="width: 30px; margin-bottom: 14px;" src="../img/people-icon.png" alt="">
-            <p>Novos doadores | Mes</p>
-            <h3>32 doadores</h3>
+            <p>Taxa de "Voltam a doar"</p>
+            <h3>62%</h3>
           </div>
           <div class="row-1-card-dash">
             <img style="width: 30px; margin-bottom: 14px;" src="../img/people-icon.png" alt="">
-            <p>Novos doadores | Mes</p>
-            <h3>32 doadores</h3>
+            <p>Avaliação média dos usuários</p>
+            <h3>4.7/5</h3>
           </div>
         </div>
 
