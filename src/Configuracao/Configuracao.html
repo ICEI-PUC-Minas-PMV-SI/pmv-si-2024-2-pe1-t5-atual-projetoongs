@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="abrirModal">Abrir Configurações</button>
+
+    <div id="modalConfiguracoes" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" id="fecharModal">&times;</span>
+            <h2 id="TituloConfiguracao">Configurações</h2>
+
+            <!-- Notificações -->
+            <div class="configuracao">
+                <label for="receberNotificacoes">
+                    <input type="checkbox" class="ui-checkbox" id="receberNotificacoes" checked>
+                    Receber Notificações
+                </label>
+            </div>
+
+            <!-- Alterar E-mail/Senha -->
+            <div class="configuracao">
+                <button id="alterarEmailSenha">Alterar E-mail/Senha</button>
+                <div id="opcoesAlteracao" class="escondido">
+                    <div id="buttonES">
+                    <button id="alterarEmail" class="EmailSenha">Alterar E-mail</button>
+                    <button id="alterarSenha" class="EmailSenha">Alterar Senha</button>
+                    </div>
+                    <div id="codigoAlteracao" class="escondido">
+                        <p>Insira o código: <input class="input type="text" id="codigoInserido"></p>
+                        <button id="validarCodigoAlteracao">Validar Código</button>
+                    </div>
+                    <div id="novaInformacao" class="escondido"></div>
+                </div>
+            </div>
+
+            <!-- Excluir Conta -->
+            <div class="configuracao">
+                <button id="excluirConta">Excluir Conta</button>
+                <div id="codigoExclusao" class="escondido">
+                    <p>Insira o código: <input class="input type="text" id="codigoExclusaoInserido"></p>
+                    <button id="validarCodigoExclusao">Validar Código</button>
+                </div>
+            </div>
+            <div class="preferences">
+                <h3>Preferências</h3>
+                <label for="preferenciasInput">Adicione suas preferências:</label>
+                <input class="input" id="preferenciasInput" type="text"  placeholder="Digite suas preferências">
+                <!--T-->
+                
+                <button class="addPref" id="adicionarPreferencia">
+                    <div class="svg-wrapper-1">
+                      <div class="svg-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                          <path fill="none" d="M0 0h24v24H0z"></path>
+                          <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <span>Send</span>
+                  </button>
+                
+                <ul class="pref"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

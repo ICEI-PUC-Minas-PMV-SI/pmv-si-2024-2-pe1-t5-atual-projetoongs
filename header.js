@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(data => {
       document.getElementById('header-placeholder').innerHTML = data;
-
       initializeHeader();
     })
     .catch(err => console.error(err));
@@ -76,7 +75,6 @@ function updateHeader() {
     loggedOutElements.forEach(el => el.classList.remove('hidden'));
     loggedInElements.forEach(el => el.classList.add('hidden'));
   }
-
   const logoutButton = document.getElementById('logout');
   if (logoutButton) {
     logoutButton.addEventListener('click', (e) => {

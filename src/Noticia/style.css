@@ -122,17 +122,16 @@ span {
     transform: scale(1);
 }
 
-#texto {
+.texto {
     margin-top: 2%;
     height: 80%;
     width: 60%;
 }
 
-#tituloOutros {
+.tituloOutros {
     font-size: 20px;
     line-height: 1.2;
 }
-
 
 h3 {
     margin-top: 5%;
@@ -140,7 +139,7 @@ h3 {
     line-height: 1.5;
 }
 
-#outrasN {
+.outrasN {
     margin-top: 2%;
 }
 
@@ -189,30 +188,31 @@ p {
 
 #box1 {
     background-image: url(../imgNoticia/coracao.jpg);
+    aspect-ratio: 16/9;
 }
 
 #box2 {
     margin-top: 20px;
     background-image: url(../imgNoticia/sangue.jpg);
+    aspect-ratio: 16/9;
 }
 
+.visu,
+        #imagem1 {
+            background-image: url(../imgNoticia/Mulher.jpg);
+        }
 
-#imagem1 {
-    background-image: url(../imgNoticia/Mulher.jpg)
-        /*./img/Mulher.jpg);*/
-}
+        #imagem2 {
+            background-image: url(../imgNoticia/Rio.jpeg);
+        }
 
-#imagem2 {
-    background-image: url(../imgNoticia/Rio.jpeg);
-}
+        #imagem3 {
+            background-image: url(../imgNoticia/Fome.jpg);
+        }
 
-#imagem3 {
-    background-image: url(../imgNoticia/menino.jpg);
-}
-
-#imagem4 {
-    background-image: url(../imgNoticia/ONGs.jpeg);
-}
+        #imagem4 {
+            background-image: url(../imgNoticia/ONGs.jpeg);
+        }
 
 /*Fim*/
 
@@ -222,18 +222,42 @@ p {
     #containerP {
         flex-direction: column;
     }
-
     #noticiaP-right {
         width: 100%;
     }
-
     .box {
         width: 100%;
     }
-
-    .outrosbox {
+    .outrosBox, .box {
         width: 100%;
-        height: 200px;
+        height: auto;
+        object-fit: cover; /* Garante que a imagem não distorça */
+        margin: 10px 0; /* Espaço vertical */
+    }
+    #container2 {
+        flex-direction: column;
+        align-items: flex-start; /* Evita a centralização */
+        justify-content: flex-start; /* Se necessário */
+        padding: 10px; /* Ajuste conforme necessário */
+        
+    }
+    #leftNoticias {
+        width: 100%;
+        margin: 0; /* Remover centralização */
+        max-width: 100%;
+    }
+    #topAssuntos{
+        display: none;
+    }
+    .box{
+        background-size: cover;
+        background-position: center;
+    }
+    .outrosBox {
+        max-width: 350px;
+        max-height: 200px;
+        background-size: cover;
+        background-position: center;
     }
 }
 
@@ -243,6 +267,7 @@ p {
     }
   
     #topAssuntos {
-        width: 100%;
+        display: none;
     }
+
 }

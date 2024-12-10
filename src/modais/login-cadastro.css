@@ -41,6 +41,7 @@ main {
   cursor: pointer;
   border-radius: 5px;
   width: 150px;
+  transition: background-color 0.2s;
 }
 
 .btn:hover {
@@ -57,6 +58,15 @@ main {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+  display: block;
 }
 
 /* Conteúdo do modal */
@@ -106,6 +116,15 @@ select {
   border-radius: 5px;
 }
 
+/* Mensagens */
+.mensagem {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  display: none;
+}
+
 /* Fechar o modal */
 .close {
   color: #aaa;
@@ -122,6 +141,19 @@ select {
 .close:focus {
   color: black;
   text-decoration: none;
+}
+
+/* Mensagens de erro nos campos */
+.error-message {
+  font-size: 12px;
+  color: red;
+  margin-bottom: 10px;
+  display: none; /* Oculto por padrão */
+}
+
+input.invalid,
+select.invalid {
+  border: 1px solid red;
 }
 
 /* Responsividade - telas pequenas */
