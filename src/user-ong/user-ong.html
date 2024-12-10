@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css-user-ong/user-ong-dashboard.css">
   <link rel="stylesheet" href="./css-user-ong/user-ong-registros.css">
   <link rel="stylesheet" href="./css-user-ong/user-ong-projetos.css">
+  <link rel="stylesheet" href="./css-user-ong/user-ong-relatorios.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
@@ -30,7 +31,7 @@
           <p id="tag-primaria">Animais</p>
           <p id="tag-secundaria">Grande Porte</p>
         </div>
-        <p class="editavel" contenteditable="false" id="bio-ong">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco...</p>
+        <p class="editavel" contenteditable="false" id="bio-ong">A ONG SOS Cidadania Animal de São Caetano do Sul tem como principal objetivo a realização de eventos para adoção de cães e gatos, resgates na medida do possível (não temos abrigo), incentivar a castração e a vacinação, lutar por vida digna dentro do CCZ Municipal, gritar em nome dos animais pelo fim das crueldades e...</p>
         <a id="ver-mais-bio" href="">ver mais</a>
         <div id="infos-ong">
           <p class="editavel" contenteditable="false" id="endereco-ong">Rua Espirito Santo - 746</p>
@@ -109,28 +110,33 @@
       <div id="reg-group-cards">
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-1.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">Antes e depois dos nossos AUmigos!</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-2.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">12° Feira Adote com Amor</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-3.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">5º Cuidado em Ação</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-4.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">Educação e Consciencia: Abandono</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
         <div class="reg-card">
           <img class="reg-img" src="../img/ong-5.png" alt="">
-          <h3 class="reg-card-h3">Lorem Ipsum</h3>
-          <p class="reg-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+          <h3 class="reg-card-h3">4º Cuidado em Ação</h3>
+          <small>13/10/24</small>
+          <p class="reg-card-paragrafo">Clique e saiba mais sobre o evento!</p>
         </div>
 
         <div style="display: flex; gap: 30px;" id="novoCard"></div>
@@ -176,8 +182,8 @@
         <div class="pj-card">
           <img class="pj-img" src="../img/ong-4.png" alt="">
           <div class="pj-card-info">
-            <h3 class="pj-card-h3">Lorem Ipsum</h3>
-            <p class="pj-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem lorem ipsum orem sumip lorem ipsum ip lorem lorem lorem ipsum orem sumip lorem ipsum ip lorem lorem </p>
+            <h3 class="pj-card-h3">Adote com Amor</h3>
+            <p class="pj-card-paragrafo">Este projeto conecta animais resgatados a famílias amorosas, promovendo adoções responsáveis e seguras.</p>
             <p class="pj-ver-mais" href="">Inscrições abertas até 15/12/24</p>
           </div>
           <div class="pj-card-lupa">
@@ -188,8 +194,8 @@
         <div class="pj-card">
           <img class="pj-img" src="../img/ong-5.png" alt="">
           <div class="pj-card-info">
-            <h3 class="pj-card-h3">Lorem Ipsum</h3>
-            <p class="pj-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem lorem ipsum orem lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+            <h3 class="pj-card-h3">Cuidado em Ação</h3>
+            <p class="pj-card-paragrafo">Focado no resgate e tratamento de animais em situação de rua ou maus-tratos para reintegrá-los a um ambiente seguro.</p>
             <a class="pj-ver-mais" href="">Inscrições abertas até 15/12/24</a>
           </div>
           <div class="pj-card-lupa">
@@ -200,8 +206,8 @@
         <div class="pj-card">
           <img class="pj-img" src="../img/ong-1.png" alt="">
           <div class="pj-card-info">
-            <h3 class="pj-card-h3">Lorem Ipsum</h3>
-            <p class="pj-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem lorem ipsum orem sumip lorem lorem ipsum lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+            <h3 class="pj-card-h3">Educação e Consciencia</h3>
+            <p class="pj-card-paragrafo">Promovemos campanhas educativas sobre direitos dos animais, guarda responsável e combate ao abandono.</p>
             <a class="pj-ver-mais" href="">Inscrições encerradas!</a>
           </div>
           <div class="pj-card-lupa">
@@ -212,8 +218,8 @@
         <div class="pj-card">
           <img class="pj-img" src="../img/ong-2.png" alt="">
           <div class="pj-card-info">
-            <h3 class="pj-card-h3">Lorem Ipsum</h3>
-            <p class="pj-card-paragrafo">lorem ipsum orem sumip lorem ipsum ip lorem lorem lorem ipsum orem sumip lorem ipsum ip lorem lorem</p>
+            <h3 class="pj-card-h3">Rede de Apoio Voluntário</h3>
+            <p class="pj-card-paragrafo">Este projeto conecta pessoas que desejam ajudar animais a oportunidades de voluntariado para transformar vidas.</p>
             <a class="pj-ver-mais" href="">Inscrições abertas até 03/01/25</a>
           </div>
           <div class="pj-card-lupa">
@@ -255,40 +261,36 @@
 
 
       <!--modal de inscrição-->
-      <div id="modalInscricao" class="modalInscricao"> <!-- add novo projeto -->
+      <div id="modalInscricao" class="modalInscricao">
         <div class="m-p-insc-main">
           <div class="m-p-insc-infos">
-            <h4>Saiba mais sobre o projeto!</h4>
-            <p>lorem ipsum</p>
-            <p>abcd</p>
+            <h3 style="margin-bottom: 20px; color: #007bff;">Editar descrição do projeto</h3>
+            <h4>Junte-se aos nossos projetos e transforme vidas!</h4>
+            <br>
+            <textarea style="height: 300px; width: 100%; background-color: #eaeeef; padding: 10px; ">A Cidadania Animal desenvolve iniciativas que fazem a diferença na vida de milhares de animais e na construção de uma sociedade mais consciente e solidária. Nossos projetos abrangem adoção responsável, resgate e cuidados, educação sobre direitos dos animais e oportunidades de voluntariado. Cada ação é pensada para criar impacto positivo e oferecer a você a chance de contribuir de forma significativa. Escolha o projeto que mais combina com você e seja parte dessa rede de amor e cidadania. Juntos, podemos fazer mais pelos nossos amigos de quatro patas!</textarea>
           </div>
 
           <div class="m-insc-left">
             <div class="m-proj-infos">
               <span class="m-fechar">&times;</span>
-              <h3>Se torne Voluntário!</h3>
+              <h3 style="margin-bottom: 20px; color: #007bff;">Solicitar alteração formulário de inscrição</h3>
+              <h3>Selecione as informações</h3>
             </div>
 
             <form class="m-insc-form">
-              <label class="m-proj-label" for="m-proj-titulo">Nome completo</label>
-              <input class="m-proj-input" placeholder="Digite..." type="text" name="m-proj-titulo" required />
+              <label class="m-proj-label" for="m-proj-titulo">Opção</label>
+              <select class="m-proj-input" placeholder="Digite..." name="m-proj-titulo" required>
+                <option value="v1" selected disabled>Escolha uma opção</option>
+                <option value="v1">Adicionar campo</option>
+                <option value="v2">Alterar campo</option>
+                <option value="v3">Relatar erro</option>
+              </select>
 
-              <label class="m-proj-label" for="m-proj-titulo">E-mail</label>
-              <input class="m-proj-input" placeholder="Digite..." type="text" name="m-proj-titulo" required />
-
-              <p class="m-proj-label" for="m-proj-titulo">Escolha um horário:</p>
-              <div style="margin-bottom: 10px;">
-                <input type="checkbox" name="m-proj-titulo" />
-                <label class="m-insc-horario">Terças e Quintas as 15:30</label>
-              </div>
-              <div style="margin-bottom: 10px;">
-                <input type="checkbox" name="m-proj-titulo" />
-                <label class="m-insc-horario">Quartas e Sextas as 15:30</label>
-              </div>
-              <div style="margin-bottom: 20px;">
-                <input type="checkbox" name="m-proj-titulo" />
-                <label class="m-insc-horario">Sabados das 10hrs as 16hrs</label>
-              </div>
+              <label class="m-proj-label" for="">Descrição</label>
+              <textarea id="news-description-proj" placeholder="Digite..." name="m-proj-desc-g" class="m-proj-desc-g"></textarea>
+              <small>Ex: Informação antiga: Nome do campo "Nome completo"</small>
+              <small> Informação nova: Somente "Nome"</small>
+              <small> Ex 2: Adicionar campo "Idade"</small>
 
               <button id="create-insc" type="submit" class="m-proj-btn">Enviar</button>
             </form>
@@ -297,6 +299,17 @@
       </div>
 
 
+    </section>
+
+    <section id="relatorios">
+      <h3>Relatório de Receitas</h3>
+      <ul>
+        <li><a href="">Relatório de receitas e gastos 2º Semestre 2024</a></li>
+        <li><a href="">Relatório de receitas e gastos 1º Semestre 2024</a></li>
+        <li><a href="">Relatório de receitas e gastos 2º Semestre 2023</a></li>
+        <li><a href="">Relatório de receitas e gastos 1º Semestre 2023</a></li>
+      </ul>
+      <button>Adicionar</button>
     </section>
   </main>
 
