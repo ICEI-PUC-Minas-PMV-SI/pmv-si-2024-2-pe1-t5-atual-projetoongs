@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil</title>
-  <link rel="stylesheet" href="./css-user-ong/user-ong.css">
   <link rel="stylesheet" href="../gerais/geral.css">
   <link rel="stylesheet" href="./css-user-ong/user-ong-dashboard.css">
   <link rel="stylesheet" href="./css-user-ong/user-ong-registros.css">
   <link rel="stylesheet" href="./css-user-ong/user-ong-projetos.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 </head>
 
 <body>
@@ -38,7 +39,7 @@
           <p class="editavel" contenteditable="false" id="email-ong">ongsoscidadaniaanimal@gmail.com</p>
         </div>
         <button onclick="editarPerfil()" id="btn-editar-perfil">editar</button>
-        <a id="ver-mais-bio" style="margin-top: 10px;" href="">Gerar relatório</a>
+        <button id="gerar-pdf" style="margin-top: 10px;" href="">Gerar relatório</button>
       </section>
       <section id="row-group">
         <div class="row-1-dash">
@@ -180,7 +181,7 @@
             <p class="pj-ver-mais" href="">Inscrições abertas até 15/12/24</p>
           </div>
           <div class="pj-card-lupa">
-            <img onclick="abreInscr()" class="pj-lupa" src="../img/lupa.png" alt="lupa">
+            <img onclick="abreInscr()" class="pj-lupa" src="../img/caneta.png" alt="lupa">
           </div>
         </div>
 
@@ -192,7 +193,7 @@
             <a class="pj-ver-mais" href="">Inscrições abertas até 15/12/24</a>
           </div>
           <div class="pj-card-lupa">
-            <img onclick="abreInscr()" class="pj-lupa" src="../img/lupa.png" alt="lupa">
+            <img onclick="abreInscr()" class="pj-lupa" src="../img/caneta.png" alt="lupa">
           </div>
         </div>
 
@@ -204,7 +205,7 @@
             <a class="pj-ver-mais" href="">Inscrições encerradas!</a>
           </div>
           <div class="pj-card-lupa">
-            <img onclick="abreInscr()" class="pj-lupa" src="../img/lupa.png" alt="lupa">
+            <img onclick="abreInscr()" class="pj-lupa" src="../img/caneta.png" alt="lupa">
           </div>
         </div>
 
@@ -216,7 +217,7 @@
             <a class="pj-ver-mais" href="">Inscrições abertas até 03/01/25</a>
           </div>
           <div class="pj-card-lupa">
-            <img onclick="abreInscr()" id="newLupa" class="pj-lupa" src="../img/lupa.png" alt="lupa">
+            <img onclick="abreInscr()" id="newLupa" class="pj-lupa" src="../img/caneta.png" alt="lupa">
           </div>
         </div>
 
@@ -270,10 +271,10 @@
 
             <form class="m-insc-form">
               <label class="m-proj-label" for="m-proj-titulo">Nome completo</label>
-              <input id="news-title-proj" class="m-proj-input" placeholder="Digite..." type="text" id="m-proj-titulo" name="m-proj-titulo" required />
+              <input class="m-proj-input" placeholder="Digite..." type="text" name="m-proj-titulo" required />
 
               <label class="m-proj-label" for="m-proj-titulo">E-mail</label>
-              <input id="news-title-proj" class="m-proj-input" placeholder="Digite..." type="text" id="m-proj-titulo" name="m-proj-titulo" required />
+              <input class="m-proj-input" placeholder="Digite..." type="text" name="m-proj-titulo" required />
 
               <p class="m-proj-label" for="m-proj-titulo">Escolha um horário:</p>
               <div style="margin-bottom: 10px;">
@@ -289,7 +290,7 @@
                 <label class="m-insc-horario">Sabados das 10hrs as 16hrs</label>
               </div>
 
-              <button id="create-proj" type="submit" class="m-proj-btn">Enviar</button>
+              <button id="create-insc" type="submit" class="m-proj-btn">Enviar</button>
             </form>
           </div>
         </div>
@@ -466,7 +467,14 @@
       }
     });
 
-
+    document.getElementById("gerar-pdf").addEventListener("click", () => {
+      html2canvas(document.querySelector("#dashboard")).then(canvas => {
+        const imgData = canvas.toDataURL("image/png");
+        const pdf = new jspdf.jsPDF();
+        pdf.addImage(imgData, "PNG", 10, 10, 190, 0); // Ajuste os valores conforme necessário
+        pdf.save("pagina.pdf");
+      });
+    });
 
   </script>
 </body>
