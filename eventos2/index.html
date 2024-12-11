@@ -9,11 +9,17 @@
     <!-- FONTES-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="../gerais/geral.css">
 
 </head>
 
@@ -47,38 +53,48 @@
                 <p></p>
 
                 <div class="info"> <!--CONTATO E VOLUNTÁRIOS-->
-                    <a href="tel:+553134083000" class="botao-ligacao"><img src="telefone.png" alt "Icones" width="20" height="20" ;> CONTATO</a>
+                    <a href="tel:+553134083000" class="botao-ligacao"><img src="telefone.png" alt "Icones" width="20"
+                            height="20" ;> CONTATO</a>
                 </div>
-                <!--VER ESPAÇO-->
-                <button id="openPopup" class="botao-ligacao"><img src="icon.png" alt="Icones" width="20" height="20">
-                    VOLUNTÁRIOS </button>
-                <div class="overlay" id="overlay"></div>
-                <div class="popup" id="popup">
-                    <p>Tem interesse em se voluntariar? Preencha o formulário abaixo e um dos responsáveis entrará em
-                        contato com você! </p>
-                    <form id="myForm">
-                        <div class="center">
-                            <input type="text" id="inputText" placeholder="NOME COMPLETO" required>
-                            <br>
-                            <input type="text" id="inputText" placeholder="TELEFONE" required>
-                            <br>
-                        </div>
-                    </form>
 
-                    <p></p>
-                    <div class="center">
-                        <buton id="closePopup">ENVIAR</buton>
+                <button id="botao" onclick="abrirPopup()" class="botao-ligacao"><img src="icon.png" alt="Icones"
+                        width="20" height="20">VOLUNTÁRIOS</button>
+
+
+                <div id="popup-overlay" onclick="fecharPopup()"></div>
+
+
+                <div id="popup">
+                    <p>
+                    <h4>Quer se voluntariar? Preencha o formulário abaixo e entraremos em contato!</h4>
+                    </p>
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome">
                     </div>
-
+                    <div class="form-group">
+                        <label for="telefone">Telefone para contato:</label>
+                        <input type="text" id="telefone" placeholder="Digite seu telefone">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Seu melhor e-mail:</label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail">
+                    </div>
+                    <button onclick="enviarFormulario()">ENVIAR</button>
+                    <button onclick="fecharPopup()">FECHAR</button>
                 </div>
+
 
             </div>
 
+
         </div>
 
-
     </div>
-    <P></P>
+
+
+
+    <p></p>
 
     <div>
         <!--iINFORMAÇÃO,LOCALIZAÇÃO E DATA-->
@@ -87,7 +103,7 @@
             <button onclick="mostrarMensagem()" class="botao-ligacao">INFORMAÇÕES</button>
         </div>
         <div class="info">
-            <button onclick="mostrarMensagem()" class="botao-ligacao">LOCALIZAÇÃO</button>
+            <button onclick="mostrarlocal()" class="botao-ligacao">LOCALIZAÇÃO</button>
         </div>
 
         <div class="info">
@@ -118,7 +134,10 @@
                 </div>
 
                 <div class="info">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.1334220483295!2d-43.93422062477528!3d-19.834306781532735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6854c4924366d%3A0x84aa2bfd9ce98eca!2sN%C3%BAcleo%20Assistencial%20Caminhos%20para%20Jesus!5e0!3m2!1spt-BR!2sus!4v1729748130253!5m2!1spt-BR!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.1334220483295!2d-43.93422062477528!3d-19.834306781532735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6854c4924366d%3A0x84aa2bfd9ce98eca!2sN%C3%BAcleo%20Assistencial%20Caminhos%20para%20Jesus!5e0!3m2!1spt-BR!2sus!4v1729748130253!5m2!1spt-BR!2sus"
+                        width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
                 <div class="info">
@@ -186,7 +205,9 @@
                         </table>
                     </div>-->
 
-                    <div class="info"><iframe src="https://calendar.google.com/calendar/embed?src=pt-br.brazilian%23holiday%40group.v.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="300" height="200" frameborder="0" scrolling="no"></iframe>
+                    <div class="info"><iframe
+                            src="https://calendar.google.com/calendar/embed?src=pt-br.brazilian%23holiday%40group.v.calendar.google.com&ctz=America%2FLos_Angeles"
+                            style="border: 0" width="300" height="200" frameborder="0" scrolling="no"></iframe>
                     </div>
 
                 </div>
@@ -226,10 +247,12 @@
                     <p></p>
 
                     <div class="info"> <!--CONTATO E VOLUNTÁRIOS-->
-                        <a href="tel:+553134083000" class="botao-ligacao"><img src="telefone.png" alt "Icones" width="20" height="20" ;> CONTATO</a>
+                        <a href="tel:+553134083000" class="botao-ligacao"><img src="telefone.png" alt "Icones"
+                                width="20" height="20" ;> CONTATO</a>
                     </div>
                     <!--VER ESPAÇO-->
-                    <button id="openPopup" class="botao-ligacao"><img src="icon.png" alt="Icones" width="20" height="20">
+                    <button id="openPopup" class="botao-ligacao"><img src="icon.png" alt="Icones" width="20"
+                            height="20">
                         VOLUNTÁRIOS </button>
                     <div class="overlay" id="overlay"></div>
                     <div class="popup" id="popup">
@@ -258,15 +281,15 @@
 
 
         </div>
-        <P></P>
+        <p></p>
 
         <div>
             <!--iINFORMAÇÃO,LOCALIZAÇÃO E DATA-->
             <div class="info" justify-content: left;>
-                <button onclick="mostrarMensagem()" class="botao-ligacao">INFORMAÇÕES</button>
+                <button onclick="mostrarMensagem2()" class="botao-ligacao">INFORMAÇÕES</button>
             </div>
             <div class="info">
-                <button onclick="mostrarMensagem()" class="botao-ligacao">LOCALIZAÇÃO</button>
+                <button onclick="mostrarlocal2()" class="botao-ligacao">LOCALIZAÇÃO</button>
             </div>
 
             <div class="info">
@@ -297,10 +320,15 @@
                     </div>
 
                     <div class="info">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.1334220483295!2d-43.93422062477528!3d-19.834306781532735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6854c4924366d%3A0x84aa2bfd9ce98eca!2sN%C3%BAcleo%20Assistencial%20Caminhos%20para%20Jesus!5e0!3m2!1spt-BR!2sus!4v1729748130253!5m2!1spt-BR!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3753.1334220483295!2d-43.93422062477528!3d-19.834306781532735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6854c4924366d%3A0x84aa2bfd9ce98eca!2sN%C3%BAcleo%20Assistencial%20Caminhos%20para%20Jesus!5e0!3m2!1spt-BR!2sus!4v1729748130253!5m2!1spt-BR!2sus"
+                            width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
 
-                    <div class="info"><iframe src="https://calendar.google.com/calendar/embed?src=pt-br.brazilian%23holiday%40group.v.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="300" height="200" frameborder="0" scrolling="no"></iframe>
+                    <div class="info"><iframe
+                            src="https://calendar.google.com/calendar/embed?src=pt-br.brazilian%23holiday%40group.v.calendar.google.com&ctz=America%2FLos_Angeles"
+                            style="border: 0" width="300" height="200" frameborder="0" scrolling="no"></iframe>
                     </div>
 
                 </div>
@@ -313,19 +341,18 @@
 
         </div>
     </div>
-    </div>
 
     <div class="center">
-        <div class="conteudo" id="conteudo">
-            <p>Sem novos eventos no momento!</p>
+
+        <button id="botao" class="botao-ligacao" onclick="exibirMensagem()">VER MAIS</button>
+        <p></p>
+        <p></p>
+        <div id="mensagem" class="conteudo">
+            Sem mais eventos no momento!
         </div>
-
-        <span class="botao" id="botao">VER MAIS</span>
-
 
     </div>
 
-    <!-- ERROS- segunda página não abre componentes, formulário e o primeiro está mudando para tudo. -->
     <footer>
         <section id="footer-sec">
             <div id="footer-menu">
