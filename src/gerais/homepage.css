@@ -1,0 +1,225 @@
+
+body, h1, h2, h3, p, ul, li, a, button, input, textarea, img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+#conteudo-principal {
+  padding: 0;
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* Saudação */
+#conteudo-principal #saudacao {
+  text-align: center;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2190FB;
+  margin-top: 80px;
+}
+
+/* Slides */
+#slide {
+  width: 65%; 
+  height: 400px; 
+  position: relative;
+  overflow: hidden; 
+  background-color: #ddd; /* Cor de fundo (caso as imagens demorem a carregar) */
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.slide-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  display: none; 
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+/* ONGs */
+#conteudo-principal #ongs {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#conteudo-principal #ongs h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 40px;
+  color: #2190FB;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #555;
+}
+
+
+.rounded-section {
+  max-width: 1000px; 
+  margin: 40px auto; 
+  padding: 40px; 
+  border-radius: 20px; 
+  text-align: center;
+}
+
+#quem-somos {
+  background-color: #4EABF1;
+  color: #ffffff;
+}
+
+#quem-somos .content-wrapper {
+  max-width: 900px; 
+  margin: 0 auto; 
+}
+
+#cta {
+  background-color: #AD94E5;
+  max-width: 1000px; 
+  margin: 40px auto; 
+  border-radius: 20px; 
+  padding: 40px;
+}
+
+#cta .content-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px; 
+  max-width: 900px; 
+  margin: 0 auto; 
+}
+
+.cta-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 320px; 
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.cta-box h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color: #2190FB;
+  margin-bottom: 15px;
+}
+
+.cta-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cta-box ul li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Animação do slide */
+.fade {
+  animation: fadeEffect 1.5s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Estilo do Pop-up */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4EABF1;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  display: none; /* Oculta o pop-up inicialmente */
+}
+
+/* Botão no Pop-up */
+.popup button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.popup button:hover {
+  background-color: #AD94E5;
+  color: white;
+}
+
+  
