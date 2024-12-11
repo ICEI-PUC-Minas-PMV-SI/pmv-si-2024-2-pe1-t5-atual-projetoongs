@@ -1,6 +1,8 @@
 const checkboxes = document.querySelectorAll('.checkboxes input[type="checkbox"]');
 const searchBar = document.querySelector(".search-bar input");
 const resultItems = document.querySelectorAll(".result-item");
+const title = document.getElementById("titulo-ong").textContent;
+const btnOng = document.getElementById("btn-abre-ong");
 
 function filterByCategory() {
   const selectedCategories = Array.from(checkboxes)
@@ -32,3 +34,13 @@ function debounce(fn, delay) {
 
 checkboxes.forEach((checkbox) => checkbox.addEventListener("change", filterByCategory));
 searchBar.addEventListener("input", debounce(searchResults, 300));
+
+
+  btnOng.addEventListener('click', () =>{
+    console.log('1')
+    console.log(title)
+    if (title == "Cidadania Animal"){
+      console.log('2')
+      window.location.href = '../user-ong/user-ong.html'
+    }
+  })

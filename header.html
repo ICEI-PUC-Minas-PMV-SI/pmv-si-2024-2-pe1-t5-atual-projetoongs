@@ -1,7 +1,7 @@
 <header>
   <div id="div-search">
     <div class="div-logotipo">
-      <img id="user-icon" src="https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg" alt="Ícone do usuário">
+      <img style="margin-bottom: 7px;" id="user-icon" src="https://cdn.icon-icons.com/icons2/2070/PNG/512/panda_icon_126885.png" alt="Ícone da Página">
       <p class="logo-title">Projeto ONGs</p>
     </div>
     <input type="text" placeholder="Pesquisar por..." aria-label="Campo de pesquisa">
@@ -19,17 +19,20 @@
 
     <div class="dropdown logged-in hidden">
       <button id="div-user-icon">
-        <img id="user-icon" src="https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg" alt="">
+        <img style="background-color: white;" id="user-icon" src="./src/img/logo-cidadania-animal.png" alt="">
       </button>
       <ul class="dropdown-content">
         <li>
-          <a onclick="meuPerfil()" href="">Meu Perfil</a>
+          <a href="./src/user-ong/user-ong.html">Meu Perfil</a>
         </li>
         <li>
-          <button onclick="openModal()">Configurações</button>
+          <a onclick="openModal()">Configurações</a>
         </li>
         <li>
           <a id="logout" href="#">Sair</a>
+        </li>
+        <li>
+          <a href="./src/user-doador/user-doador.html">Perfil Doador</a>
         </li>
       </ul>
     </div>

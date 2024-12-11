@@ -2,12 +2,12 @@ let tipoPerfil = localStorage.getItem("tipoPerfil");
 
 function meuPerfil(){
   if (tipoPerfil == 'doador'){
-    window.location.href = '../'
+    window.location.href = '../user-doador/user-doador.html'
   }else if (tipoPerfil == 'ong'){
     window.location.href = '../user-ong/user-ong.html'
   }else{
     alert('erro: tipo de perfil não encontrado, redirecionando para o login');
-    window.location.href = '../index.html'
+    window.location.href = '../../index.html'
   }
 };
 
