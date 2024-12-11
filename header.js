@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initializeHeader() {
+    updateHeader();
+
     const elements = {
         modalLogin: document.getElementById('loginModal'),
         modalCadastro: document.getElementById('signupModal'),
@@ -219,6 +221,8 @@ function initializeHeader() {
             }
 
             exibirMensagem(`Bem-vindo, ${dadosUsuario.username}!`, "sucesso", elements.mensagemDivLogin);
+            localStorage.setItem('loggedIn', 'true');
+            updateHeader();
             fecharModal(elements.modalLogin);
             redirectToIndex();
         });
