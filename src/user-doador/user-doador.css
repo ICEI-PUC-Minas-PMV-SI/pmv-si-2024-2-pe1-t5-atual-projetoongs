@@ -18,12 +18,10 @@ header {
     padding: 0px 40px;
 }
 
-
 nav {
     display: flex;
     gap: 20px;
 }
-
 
 .container {
     display: flex;

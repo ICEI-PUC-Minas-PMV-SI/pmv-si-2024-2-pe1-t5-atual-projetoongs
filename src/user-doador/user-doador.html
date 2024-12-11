@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfil de Usuário</title>
+  <script src="./user-doador.js" defer></script>
   <link rel="stylesheet" href="user-doador.css">
   <link rel="stylesheet" href="../gerais/geral.css">
 </head>
@@ -16,13 +17,13 @@
     <aside class="profile-info">
       <div class="avatar"></div>
       <ul>
-        <li>Nome</li>
-        <li>E-mail</li>
-        <li>Telefone</li>
-        <li>Endereço</li>
-        <li>Biografia</li>
+        <li>Nome: <input type="text" name="name" value="João da Silva" disabled></li>
+        <li>E-mail: <input type="email" name="email" value="joao.silva@example.com" disabled></li>
+        <li>Telefone: <input type="tel" name="phone" value="(11) 1234-5678" disabled></li>
+        <li>Endereço: <input type="text" name="address" value="Rua Exemplo, 123" disabled></li>
+        <li>Biografia:<input type="text" name="bio" value="Biologo, amo animais..." disabled></li>
       </ul>
-      <textarea placeholder="Biografia"></textarea>
+      <textarea name="bio" disabled>Amante de causas sociais.</textarea>
       <button class="edit-btn">Editar</button>
     </aside>
 
