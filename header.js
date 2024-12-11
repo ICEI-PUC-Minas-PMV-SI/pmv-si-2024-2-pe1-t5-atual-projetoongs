@@ -491,6 +491,7 @@ function alterarEmailESenha(){
     }
 };
 
+
 // Alterar e-mail
 function alterarEmail(){
     const alterarEmailBtn = document.getElementById('alterarEmail');
@@ -498,12 +499,27 @@ function alterarEmail(){
         alterarEmailBtn.addEventListener('click', () => {
             try {
                 solicitarNovoToken();
-                codigoAlteracao.classList.remove('escondido');
-                novaInformacao.innerHTML = `
-                    <p>Insira o novo e-mail: <input class="input" type="email" id="novoEmail" aria-label="Digite o novo email"></p>
-                    <button class="buttonConf" id="confirmarTroca">Confirmar Troca</button>
-                `;
-                adicionarEventoConfirmacao();
+
+                // Obtém os elementos necessários
+                const codigoAlteracao = document.getElementById('codigoAlteracao');
+                const novaInformacao = document.getElementById('novaInformacao');
+
+                // Garante que os elementos existem
+                if (codigoAlteracao && novaInformacao) {
+                    codigoAlteracao.classList.remove('escondido');
+                    novaInformacao.innerHTML = `
+                        <p>Insira o novo e-mail: <input class="input" type="email" id="novoEmail" aria-label="Digite o novo email"></p>
+                        <button class="buttonConf" id="confirmarTroca">Confirmar Troca</button>
+                    `;
+
+                    // Adiciona o evento de clique no botão de confirmação
+                    const confirmarTrocaBtn = document.getElementById('confirmarTroca');
+                    if (confirmarTrocaBtn) {
+                        confirmarTrocaBtn.addEventListener('click', alterarEmailESenha);
+                    }
+                } else {
+                    console.warn('Elementos necessários para alterar e-mail não encontrados.');
+                }
             } catch (error) {
                 console.error('Erro ao alterar o e-mail:', error);
             }
@@ -511,7 +527,8 @@ function alterarEmail(){
     } else {
         console.warn("Botão 'alterarEmail' não encontrado.");
     }
-};
+}
+
 
     // Alterar senha
 function alterarSenha(){
@@ -587,12 +604,9 @@ function validaCodigo(){
                 const codigoExclusaoInserido = document.getElementById('codigoExclusaoInserido').value;
                 if (codigoExclusaoInserido === '4321') {
                     alert('Conta excluída com sucesso!');
-                    modalc.style.display = 'none';
-                    setTimeout(() => {
-                            codigoExclusaoInserido = '';
-                            codigoInserido = '';
-                            closeModal(); 
-                    }, 500); 
+                    setTimeout(function() {
+                        location.reload();
+                    }, 2000);
                 } else {
                     alert('Código incorreto!');
                 }
@@ -606,61 +620,61 @@ function validaCodigo(){
 
   
 }
+// Adicionar evento de confirmação
 function adicionarEventoConfirmacao() {
     try {
-            const confirmarTrocaBtn = document.getElementById('confirmarTroca');
-            if (confirmarTrocaBtn) {
-                confirmarTrocaBtn.addEventListener('click', () => {
-                    try {
-                        const novoEmail = document.getElementById('novoEmail');
-                        if (novoEmail) {
-                            alert('Troca de e-mail sucedida!');
-                            if (novaInformacao) {
-                                const novaInformacao = document.getElementById('novaInformacao');
-                                novaInformacao.innerHTML = `<p>E-mail alterado com sucesso!</p>`;
-                            }
+        const confirmarTrocaBtn = document.getElementById('confirmarTroca');
+        if (confirmarTrocaBtn) {
+            confirmarTrocaBtn.addEventListener('click', () => {
+                try {
+                    const novoEmail = document.getElementById('novoEmail');
+                    const novaSenha1 = document.getElementById('novaSenha1');
+                    const novaSenha2 = document.getElementById('novaSenha2');
+                    const novaInformacao = document.getElementById('novaInformacao');
+
+                    if (novoEmail) {
+                        alert('Troca de e-mail sucedida!');
+                        novaInformacao.innerHTML = '<p>E-mail alterado com sucesso!</p>';
+                    } else if (novaSenha1 && novaSenha2) {
+                        if (novaSenha1.value === novaSenha2.value) {
+                            alert('Troca de senha sucedida!');
+                            novaInformacao.innerHTML = '<p>Senha alterada com sucesso!</p>';
                         } else {
-                            const senha1 = document.getElementById('novaSenha1').value;
-                            const senha2 = document.getElementById('novaSenha2').value;
-                            if (senha1 === senha2) {
-                                alert('Troca de senha sucedida!');
-                                if (novaInformacao) {
-                                    novaInformacao.innerHTML = `<p>Senha alterada com sucesso!</p>`;
-                                }
-                            } else {
-                                alert('As senhas não coincidem.');
-                            }
+                            alert('As senhas não coincidem.');
+                            return;
                         }
-                        if (novaInformacao) {
-                            novaInformacao.innerHTML += `<button id="voltarInicio">Voltar ao Início</button>`;
-                            const voltarInicioBtn = document.getElementById('voltarInicio');
-                            if (voltarInicioBtn) {
-                                voltarInicioBtn.addEventListener('click', reiniciarModal);
-                            }
-                        }
-                    } catch (error) {
-                        console.error('Erro ao confirmar troca:', error);
                     }
-                });
-            }
-            if (novaInformacao) {
-                novaInformacao.classList.add('escondido');
-            }
+                    setTimeout(function() {
+                        location.reload();
+                    }, 2000);
+                } catch (error) {
+                    console.error('Erro ao confirmar troca:', error);
+                }
+            });
+        }
     } catch (error) {
         console.error('Erro ao adicionar evento de confirmação:', error);
     }
-}
+};
+
+function solicitarNovoToken() {
+    alert('Novo código enviado: 1234');
+    document.getElementById('codigoInserido').value = '';
+};
 
 // Preferências
 function add() {
         try {
         const input = document.querySelector('#preferenciasInput');
+        const limpa = document.querySelector('#limpa');
         const button = document.getElementById('adicionarPreferencia');
         const listaCompleta = document.querySelector('.pref');
         let minhasPreferencias = [];
 
         if (button) {
             button.addEventListener('click', adicionarPref);
+        }else{
+                button.addEventListener('click', limparPref)
         }
 
         function adicionarPref() {
@@ -675,9 +689,13 @@ function add() {
                     return;
                 }
 
+                // Adicionar a nova preferência à lista
                 minhasPreferencias.push(valor);
                 mostrarTarefas();
+                
+                // Limpar o campo de entrada
                 input.value = '';
+
             } catch (error) {
                 console.error('Erro ao adicionar preferência:', error);
             }
@@ -688,30 +706,23 @@ function add() {
             minhasPreferencias.forEach((tarefa, posicao) => {
                 nova += `
                 <li class="selecao" id="list">
-                    <img src="../img/delete.png" id="delete" (${onclick="deletarPref"}${posicao})>
+                    <img src="./src/img/delete.png" id="delete" onclick="deletarPref(${posicao})" style="cursor: pointer;">
                     <p>${tarefa}</p> 
                 </li>
                 `;
             });
             listaCompleta.innerHTML = nova;
         };
+        function limparPref() {
+            minhasPreferencias.splice(posicao, 1);
+            mostrarTarefas();
+        }
 
-        function deletarPref(posicao) {
-            try {
-                minhasPreferencias.splice(posicao, 1);
-                mostrarTarefas();
-            } catch (error) {
-                console.error('Erro ao deletar preferência:', error);
-            }
-        };
     } catch (error) {
         console.error('Erro ao configurar configurações:', error);
     };
 };
 
 
+ 
 
-function solicitarNovoToken() {
-    alert('Novo código enviado: 1234');
-    document.getElementById('codigoInserido').value = '';
-}
