@@ -21,11 +21,17 @@
       <button id="div-user-icon">
         <img id="user-icon" src="https://t4.ftcdn.net/jpg/05/49/98/39/360_F_549983970_bRCkYfk0P6PP5fKbMhZMIb07mCJ6esXL.jpg" alt="">
       </button>
-      <div class="dropdown-content">
-        <a onclick="meuPerfil()" href="">Meu Perfil</a>
-        <a id="abrirModalC" onclick="" href="">Configurações</a>
-        <a id="logout" href="#">Sair</a>
-      </div>
+      <ul class="dropdown-content">
+        <li>
+          <a onclick="meuPerfil()" href="">Meu Perfil</a>
+        </li>
+        <li>
+          <button onclick="openModal()">Configurações</button>
+        </li>
+        <li>
+          <a id="logout" href="#">Sair</a>
+        </li>
+      </ul>
     </div>
     <div class="dropdown">
       <button id="div-user-icon">
@@ -369,7 +375,7 @@
 <div id="modalCongif">
   <div id="modalConfiguracoes" class="modal">
     <div class="modal-conteudo">
-        <span class="fechar" id="fecharModalC">&times;</span>
+        <button class="fechar" onclick="closeModal()">&times;</button>
         <h2 id="TituloConfiguracao">Configurações</h2>
   
         <!-- Notificações -->
@@ -382,15 +388,15 @@
   
         <!-- Alterar E-mail/Senha -->
         <div class="configuracao">
-            <button class="buttonConf" id="alterarEmailSenha">Alterar E-mail/Senha</button>
+            <button class="buttonConf"  id="alterarEmailSenha" onclick="alterarEmailESenha()">Alterar E-mail/Senha</button>
             <div id="opcoesAlteracao" class="escondido">
                 <div id="buttonES">
-                <button class="buttonConf" id="alterarEmail" class="EmailSenha">Alterar E-mail</button>
-                <button class="buttonConf" id="alterarSenha" class="EmailSenha">Alterar Senha</button>
+                <button class="buttonConf" id="alterarEmail" class="EmailSenha" onclick="alterarEmail()"> Alterar E-mail</button>
+                <button class="buttonConf" id="alterarSenha" class="EmailSenha" onclick="alterarSenha()"> Alterar Senha</button>
                 </div>
                 <div id="codigoAlteracao" class="escondido">
                     <p>Insira o código: <input class="input" type=text id="codigoInserido"></p>
-                    <button class="buttonConf" id="validarCodigoAlteracao">Validar Código</button>
+                    <button class="buttonConf" id="validarCodigoAlteracao" onclick="validaCodigo()">Validar Código</button>
                 </div>
                 <div id="novaInformacao" class="escondido"></div>
             </div>
@@ -398,19 +404,20 @@
   
         <!-- Excluir Conta -->
         <div class="configuracao">
-            <button class="buttonConf" id="excluirConta">Excluir Conta</button>
+            <button class="buttonConf" id="excluirConta" onclick="excluirConta()">Excluir Conta</button>
             <div id="codigoExclusao" class="escondido">
-                <p>Insira o código: <input class="input" type=text" id="codigoExclusaoInserido"></p>
-                <button class="buttonConf" id="validarCodigoExclusao">Validar Código</button>
+                <p>Insira o código: <input class="input" type="text" id="codigoExclusaoInserido"></p>
+                <button class="buttonConf" id="validarCodigoExclusao" onclick="validaCodigo()" >Validar Código</button>
             </div>
         </div>
         <div class="preferences">
             <h3>Preferências</h3>
             <label for="preferenciasInput">Adicione suas preferências:</label>
             <input class="input" id="preferenciasInput" type="text"  placeholder="Digite suas preferências">
+
             <!--T-->
             
-            <button class="buttonConf" class="addPref" id="adicionarPreferencia">
+            <button class="buttonConf addPref" id="adicionarPreferencia" onclick="add()">
                 <div class="svg-wrapper-1">
                   <div class="svg-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
