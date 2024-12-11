@@ -8,7 +8,7 @@ Uma API, ou Interface de Programação de Aplicativos (em inglês, _Application 
 
 As APIs são fundamentais para o desenvolvimento de software, pois permitem que os desenvolvedores acessem recursos e funcionalidades de outros aplicativos ou serviços, reutilizando recursos, combinando dados e funcionalidades de várias fontes diferentes.
 
-As aplicações que combinam essas funcionalidades de fontes externas para prover um serviço mais rico é chamado de _Mashups_. Um exemplo comum de mashup seria um mapa interativo que combina dados de localização de diferentes fontes, como o Google Maps e dados meteorológicos de uma API de previsão do tempo.
+As aplicações que combinam essas funcionalidades de fontes externas para prover um serviço mais rico é chamado de _Mashups_. Um exemplo comum de mashup seria um mapa interativo que combina dados de localização de diferentes fontes, como o Google Maps e dados meteorológicos de uma API de previsão do tempo. 
 
 Neste projeto web, vocês podem utilizar APIs para
 
@@ -31,3 +31,5 @@ Neste projeto web, vocês podem utilizar APIs para
 - Rapid API Hub: [https://rapidapi.com/hub](https://rapidapi.com/hub)
 
 - Melhores APIs Para Desenvolvedores: [https://www.brasilcode.com.br/melhores-apis-para-desenvolvedores/](https://www.brasilcode.com.br/melhores-apis-para-desenvolvedores/)
+
+ 
